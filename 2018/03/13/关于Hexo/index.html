@@ -110,7 +110,7 @@
 <meta property="og:image" content="https://sheldon22.github.io/2018/03/13/关于Hexo/8.png">
 <meta property="og:image" content="https://sheldon22.github.io/2018/03/13/关于Hexo/9.png">
 <meta property="og:image" content="https://sheldon22.github.io/2018/03/13/关于Hexo/10.png">
-<meta property="og:updated_time" content="2018-03-13T09:01:35.103Z">
+<meta property="og:updated_time" content="2018-03-13T09:16:46.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Hexo">
 <meta name="twitter:description" content="搭建hexo搭建Hexo博客的基础流程为：安装Node.js →安装Git → 安装Hexo → 安装主题 → 本地测试运行 → 注册github并创建同名仓库 → 部署到github上开启page。 安装Hexonpm install -g hexo-cli(如果出现报错，可能是权限问题，右键点击gitbash以管理员身份运行)。 初始化在磁盘里随便建一个文件夹，名字随便取，然后进入刚建立的文件">
@@ -383,7 +383,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T17:01:35+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T17:16:46+08:00">
                 2018-03-13
               </time>
             
@@ -448,7 +448,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,474
+                  1,500
                 </span>
               
 
@@ -491,24 +491,23 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <h6 id="在本地启动"><a href="#在本地启动" class="headerlink" title="在本地启动"></a>在本地启动</h6><p><code>hexo generate</code>(生成静态文件)，<code>hexo server</code>(在本地服务器运行)</p>
 <h6 id="部署到githup上"><a href="#部署到githup上" class="headerlink" title="部署到githup上"></a>部署到githup上</h6><p>在githup上创建一个新的仓库(Repository), 仓库名(Repository name)必须为你的用户名.github.io。</p>
 <h6 id="安装Git部署插件"><a href="#安装Git部署插件" class="headerlink" title="安装Git部署插件"></a>安装Git部署插件</h6><p><code>npm install hexo-deployer-git –save</code></p>
-<h6 id="更改hexo配置文件"><a href="#更改hexo配置文件" class="headerlink" title="更改hexo配置文件"></a>更改hexo配置文件</h6><p>a. 把第 6 行的 title 改成你想要的名字<br>b. 把第 9 行的 author 改成你的大名<br>c. 把最后一行的 type 改成 git<br>d. 在最后一行，与 type 平齐，加上一行 repo: 仓库地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:git@github.com:你的用户名/你的用户名.github.io.git</span><br></pre></td></tr></table></figure></p>
+<h6 id="更改hexo配置文件"><a href="#更改hexo配置文件" class="headerlink" title="更改hexo配置文件"></a>更改hexo配置文件</h6><p>a. 把第 6 行的 title 改成你想要的名字<br>b. 把第 9 行的 author 改成你的大名<br>c. 把最后一行的 type 改成 git<br>d. 在最后一行，与 type 平齐，加上一行 repo: 仓库地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:git@github.com:你的用户名.github.io.git</span><br></pre></td></tr></table></figure></p>
 <h6 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub Pages"></a>打开GitHub Pages</h6><p>打开 GitHub Pages 功能，如果已经打开了，就直接点击预览链接。</p>
-<h6 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h6><p><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a></p>
+<h6 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h6><p>在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>找到你喜欢的主题，clone它的SSH。</p>
 <h6 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your-hexo-site</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <h6 id="Hexo配置文件"><a href="#Hexo配置文件" class="headerlink" title="Hexo配置文件"></a>Hexo配置文件</h6><p>在Hexo中有两份配置文件，其名称都是<code>_config.yml</code>。其中，一份位于<strong>hexo站点的根目录</strong>下，主要包含Hexo<strong>本身的配置</strong>；另一份位于<strong>主题目录</strong>下，这份配置由主题作者提供，主要用于配置<strong>主题相关</strong>的选项。</p>
 <h6 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h6><p>打开网站配置文件<code>_config.yml</code>，找到<strong>theme</strong>(第75行)，将其值更改为你使用的主题名。 <code>hexo generate</code>,<code>hexo deploy</code>后等一分钟，然后刷新你的博客页面，你会看到一个新的外观。</p>
 <h6 id="在博客上插入图片"><a href="#在博客上插入图片" class="headerlink" title="在博客上插入图片"></a>在博客上插入图片</h6><p>a. 把<strong>主页配置</strong>文件<code>_config.yml</code>里的<code>post_asset_folder</code>设置为true。<br>b. 在hexo目录下执行<code>npm install hexo-asset-image --save</code>下载安装一个可以上传本地图片的插件。<br>c. 等待一小段时间后，再运行<code>hexo new &quot;xxxx&quot;</code>来生成md博文时，<code>/source/_posts</code>文件夹内除了<code>xxxx.md</code>文件还有一个同名的文件夹。<br>d. 之后想在<code>xxxx.md</code>中引入图片时，先把图片复制到xxxx这个文件夹中，<code>![你想输入的替代文字](xxxx/图片名.jpg)</code>。xxxx是这个<strong>md文件</strong>的名字，也是同名文件夹的名字。</p>
 <h5 id="绑定私人域名"><a href="#绑定私人域名" class="headerlink" title="绑定私人域名"></a>绑定私人域名</h5><h6 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h6><p>在namesilo上搜索自己想要的域名(namesilo需要注册帐号，如果没有帐号，先申请一个，资料都可以随便填，但邮箱最好保证正确)。网址<a href="https://www.namesilo.com/" target="_blank" rel="noopener">https://www.namesilo.com/</a><br><img src="/2018/03/13/关于Hexo/1.png" alt=""><br>找到合适的域名后选中它，点击register…<br><img src="/2018/03/13/关于Hexo/2.png" alt=""><br>第三项是是否自动扣款，第四项是隐私设置，第五项是设置年限。<br><img src="/2018/03/13/关于Hexo/3.png" alt=""><br>全部改好以后就可以付款了，选支付宝。<br><img src="/2018/03/13/关于Hexo/4.png" alt=""><br>付完款以后登录你刚才申请的帐号，进入<br><img src="/2018/03/13/关于Hexo/5.png" alt=""><br>选择<img src="/2018/03/13/关于Hexo/6.png" alt=""><br>点开后<img src="/2018/03/13/关于Hexo/7.png" alt="">点击它解析DNS，挂到github上就好。</p>
-<h6 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h6><p>记录类型选A或CNAME<br><img src="/2018/03/13/关于Hexo/8.png" alt=""><br>A的记录值就是ip地址。github提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，两个都要填上。hostname空着就行。<br><img src="/2018/03/13/关于Hexo/9.png" alt=""><br>github提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，两个都要填上。hostname空着就行。<br>CNAME记录值填你的账户名github.io<br><img src="/2018/03/13/关于Hexo/10.png" alt=""></p>
+<h6 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h6><p>记录类型选A或CNAME<br><img src="/2018/03/13/关于Hexo/8.png" alt=""><br>A的记录值就是ip地址。github提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，两个都要填上。hostname空着就行。<br><img src="/2018/03/13/关于Hexo/9.png" alt=""><br>CNAME记录值填你的账户名github.io<br><img src="/2018/03/13/关于Hexo/10.png" alt=""></p>
 <h6 id="添加CNAME文件"><a href="#添加CNAME文件" class="headerlink" title="添加CNAME文件"></a>添加CNAME文件</h6><p>在你的hexo文件夹下source文件夹中新建一个CNAME文件(<strong>必须大写，无后缀名</strong>)，然后用文本编辑器打开，在首行添加你的网站域名如xxxx.com，注意前面没有<code>http://</code>，也没有<code>www</code>，然后使用<code>hexo generate</code> &amp;&amp; <code>hexo deploy</code>上传部署。</p>
 <h5 id="了解Hexo"><a href="#了解Hexo" class="headerlink" title="了解Hexo"></a>了解Hexo</h5><p>a. <code>_config.yml</code>是<strong>整体</strong>的配置文件，很多基础配置、插件配置等都需要在里面进行。要注意的是，该文件格式要求极为严格，缺少一个空格都会导致运行错误。小提示：不要用 Tab 缩进，用两个空格符。</p>
-<p>b. <code>layout</code>，包括draft(草稿)、page(页面)、post(文章)。这个就是三种文件的基本格式。其中post是你发表的文章，会显示在你的网站里，一篇post会包括title 标题、date 日期、tags 标签等信息。draft是草稿，只有你在本地能看到，必须要publish后才能成为post，draft和post差别是date，因为draft没有发表，所以不需要指定日期。page是一个页面，对应一个新的html页面。</p>
-<p>c. <code>public</code>文件夹，这个文件夹是最终会发布到网站上的真实内容。我们可以把<code>public</code>文件夹当作是真正的被用户看到的，而其他的<code>source</code>、<code>themes</code>等都是为<code>public</code>服务的。Hexo里有一个很重要的指令<code>hexo generate</code>，这个指令就是利用所有代码里的配置信息、<code>source</code>里写的文章、<code>themes</code>里的样式，共同生成最终的静态<code>html</code>文件，存入<code>public</code>文件夹内。在我们执行了发布指令<code>hexo deploy</code>后，就会把<code>public</code>的内容部署到<code>GitHub Pages</code>上。当用户在访问我们的博客时，他们会看到<code>public</code>里生成的<code>html</code>文件。这个概念非常重要，即<strong>代码和真实静态页面</strong>是<strong>独立</strong>的。</p>
-<p>d. <code>generate</code>和<code>deploy</code>，<code>generate</code>会把我们的配置、文章和主题结合起来生成<code>html</code>静态文件放在<code>public</code>里面。但此时用户还看不到本地<code>public</code>文件里的页面，我们必须用<code>deploy</code>才能把静态文件部署到<code>GitHub Pages上</code>。</p>
+<p>b. <code>layout</code>，包括draft(草稿)、page(页面)、post(文章)。其中post是你发表的文章，会显示在你的网站里，一篇post包括title 标题、date 日期、tags 标签等信息。draft是草稿，只有在本地才能看到，publish后才能成为post，draft和post差别是date，因为draft没有发表，所以不需要指定日期。page是一个页面，对应一个新的html页面。</p>
+<p>c. <code>public</code>文件夹，这个文件夹是最终会发布到网站上的内容。用户只能看到<code>public</code>文件夹里面的东西，而其他的<code>source</code>、<code>themes</code>等都是为<code>public</code>服务的。<code>hexo generate</code>把代码里的所有配置信息、<code>source</code>里写的文章、<code>themes</code>里的样式都结合起来，生成最终的静态<code>html</code>文件，存入<code>public</code>文件夹内。在我们执行了发布指令<code>hexo deploy</code>后，就会把<code>public</code>的内容部署到<code>GitHub Pages</code>上。当用户在访问我们的博客时，他们会看到<code>public</code>里生成的<code>html</code>文件。即<strong>代码和真实静态页面</strong>是<strong>独立</strong>的。</p>
 <p><strong>参考文献</strong>：</p>
 <ol>
-<li>cherryblog.site <a href="http://cherryblog.site/Hexo-high-level-tutorialcloudmusic,bg-customthemes-statistical.html" target="_blank" rel="noopener"></a></li>
-<li>wingjay.com <a href="http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/]http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"></a></li>
+<li>cherryblog.site [(<a href="http://cherryblog.site/Hexo-high-level-tutorialcloudmusic,bg-customthemes-statistical.html)]" target="_blank" rel="noopener">http://cherryblog.site/Hexo-high-level-tutorialcloudmusic,bg-customthemes-statistical.html)]</a></li>
+<li>wingjay.com [(<a href="http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/]http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)]" target="_blank" rel="noopener">http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/]http://wingjay.com/2015/12/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%A4%A9%E4%B9%8B%E5%86%85%E6%90%AD%E5%BB%BA%E4%BB%A5%E4%BD%A0%E8%87%AA%E5%B7%B1%E5%90%8D%E5%AD%97%E4%B8%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%BE%88cool%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)]</a></li>
 <li><a href="http://blog.csdn.net/sugar_rainbow/article/details/57415705" target="_blank" rel="noopener">http://blog.csdn.net/sugar_rainbow/article/details/57415705</a></li>
 </ol>
 
