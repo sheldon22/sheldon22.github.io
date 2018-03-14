@@ -95,14 +95,14 @@
 <meta name="description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文档流与浮动">
+<meta property="og:title" content="文档流、浮动与定位">
 <meta property="og:url" content="https://sheldon22.github.io/2018/03/14/文档流与浮动/index.html">
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T03:42:12.244Z">
+<meta property="og:updated_time" content="2018-03-14T04:06:55.209Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文档流与浮动">
+<meta name="twitter:title" content="文档流、浮动与定位">
 <meta name="twitter:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <title>文档流与浮动 | 凌云阁</title>
+  <title>文档流、浮动与定位 | 凌云阁</title>
   
 
 
@@ -344,7 +344,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
         
         
-          <h1 class="post-title" itemprop="name headline">文档流与浮动</h1>
+          <h1 class="post-title" itemprop="name headline">文档流、浮动与定位</h1>
         
 
         <div class="post-meta">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:42:12+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T12:06:55+08:00">
                 2018-03-14
               </time>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  791
+                  1,102
                 </span>
               
 
@@ -453,7 +453,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -487,6 +487,11 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <li>两栏布局<a href="http://summerlee.club/Task/%E4%B8%A4%E6%A0%8F" target="_blank" rel="noopener">传送门</a></li>
 <li>三栏布局<a href="http://summerlee.club/Task/%E4%B8%89%E6%A0%8F" target="_blank" rel="noopener">传送门</a></li>
 </ol>
+<h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><p>定位就是通过设置<code>position</code>属性值来覆盖默认的布局方式。<code>position</code>属性值如下</p>
+<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p><code>static</code>是<code>position</code>属性的默认值，即没有定位。文档流里的元素都处在<strong>正常</strong>的位置。</p>
+<h5 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h5><p>使用相对定位<code>relative</code>时，会导致<strong>元素</strong>相对<strong>自身位置</strong>发生变化，而覆盖掉其他的元素框。但是在文档流中，它仍然占据着<strong>原来</strong>的位置，所以其他元素的位置不会发生变化。</p>
+<h5 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h5><p>使用绝对定位<code>absolute</code>的元素，在没有<strong>父元素</strong>设置定位的话，默认就是以<code>body</code>来定位的。要想相对当前元素的父元素来定位，父元素需要设置<code>position：relative</code>。使用绝对定位<code>absolute</code>的元素具有收缩性，如果没有设置宽度，元素会根据内容自动调整宽度(<code>absolute</code>具有自适应宽度的特性)。元素的位置通过”left”, “top”, “right”以及”bottom”属性进行规定。绝对定位使元素脱离文档流，因此不占据空间。</p>
+<h5 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h5><p><code>fixed</code>的特性跟<code>absolute</code>一样，唯一的区别在于<code>fixed</code>是根据<strong>浏览器窗口</strong>来定位，无论其他元素怎么设置，都影响不了它。</p>
 
       
     </div>
@@ -714,7 +719,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档流"><span class="nav-number">1.</span> <span class="nav-text">文档流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动"><span class="nav-number">2.</span> <span class="nav-text">浮动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档流"><span class="nav-number">1.</span> <span class="nav-text">文档流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动"><span class="nav-number">2.</span> <span class="nav-text">浮动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定位"><span class="nav-number">3.</span> <span class="nav-text">定位</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#static"><span class="nav-number">3.1.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#relative"><span class="nav-number">3.2.</span> <span class="nav-text">relative</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#absolute"><span class="nav-number">3.3.</span> <span class="nav-text">absolute</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fixed"><span class="nav-number">3.4.</span> <span class="nav-text">fixed</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -748,7 +753,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.8k</span>
+    <span title="Site words total count">10.1k</span>
   
 </div>
 
