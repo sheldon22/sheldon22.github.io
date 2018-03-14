@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T03:40:11.373Z">
+<meta property="og:updated_time" content="2018-03-14T03:42:12.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文档流与浮动">
 <meta name="twitter:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:40:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T11:42:12+08:00">
                 2018-03-14
               </time>
             
@@ -477,7 +477,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
         <h4 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h4><p>文档流指的是浏览器在页面放置HTML元素所用的的方法。</p>
 <p><strong>块</strong>元素<strong>从上向下流</strong>，各个块元素之间会有一个默认的<strong>换行</strong>，每个块元素会占据页面的<strong>整个宽度</strong>。块级元素的宽度默认是<strong>自适应</strong>它的<strong>父</strong>元素的。块级元素的<strong>高度</strong>是由它<strong>内部文档流中元素</strong>的<strong>高度总和</strong>决定的。如果块级元素里面只有一个<strong>内联</strong>元素，那个块级元素的高度就是由这个内联元素的<strong>行高</strong>决定的。如果有多个内联元素，就是它们的<strong>行高相加</strong>。</p>
 <p><strong>内联</strong>元素在块元素内部从<strong>左上方流向右下方</strong>。如果流动遇到阻碍, 它就会自动换行继续流动，Span的border(汉字)如果在自动换行的过程中被截断了, 它并不会变成两个, 会变成上下各有一部分。而英文则不会换行, 如果想要它换行, 要添加一个<code>Word-break: break-all</code>。<br>内联元素的<strong>宽度</strong>是由<strong>文本里面字的个数</strong>确定的。<strong>高度</strong>是由<strong>行高</strong>决定的。</p>
-<p>使用浮动float、绝对定位 position: absolute和固定定位position: fixed可以让元素脱离文档流。</p>
+<p>使用浮动<code>float</code>、绝对定位<code>position: absolute</code>和固定定位<code>position: fixed</code>可以让元素脱离文档流。</p>
 <h4 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h4><p><code>float</code>被设计出来的初衷是用于文字环绕效果, 即对一个图片使用<code>float</code>之后，它周围的文字会环绕着它。后来发现使用<code>float</code>+<code>div</code>是一种不错的排版方法。所以现在绝大多数情况下使用<code>float</code>就是为了横向排版或者多列布局了。</p>
 <p>由于<code>float</code>会使元素脱离文档流，所以当一个元素里只包含一个浮动元素时，这个浮动元素会破坏父元素的原本结构，使得父元素的高度发生坍塌。<strong>块级</strong>元素设置了<code>float</code>之后，如果不手动设置宽度，其<strong>宽度</strong>会根据<strong>内容自动调整</strong>。使用了<code>float</code>的元素会自动变为块元素。</p>
 <p>使用浮动会带来一定的副作用，如父元素高度坍塌等，所以我们需要清除浮动。清除浮动的步骤是给包含浮动元素的<strong>容器</strong>设置<code>clearfix</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after &#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
