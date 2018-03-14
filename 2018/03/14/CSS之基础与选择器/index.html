@@ -81,7 +81,7 @@
 
 
 
-  <meta name="keywords" content="HTML," />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="HTML即 Hypertext Markup Language 是 超文本标记语言 的缩写。HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。 HTML标签由英文尖括号 &amp;lt; 和 &amp;gt; 括起来的，如&amp;lt;html&amp;gt;就是一个标签。html中的标签一般都是成对出现的，分为开始标签和结束标签。结束标签比开始标签多了一个/。标签与标签之">
-<meta name="keywords" content="HTML">
+<meta name="description" content="CSS基础学完了HTML，总算是可以写一个网页出来了，但这个网页没什么样式，比较丑(HTML也不是完全没有样式，只是样式比较少，不如CSS好用)，怎么办呢？这时候就需要CSS来帮忙了。 CSS全名为Cascading Style Sheet, 是用来给网页增加样式的。如何添加CSS呢？有以下三种方式：外部式、内部式、内联式。 a. 外部样式表: 就是把CSS代码写一个单独的外部文件中，这个CSS样">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML之基础知识与标签">
-<meta property="og:url" content="https://sheldon22.github.io/2018/03/13/HTML之基础知识与标签/index.html">
+<meta property="og:title" content="CSS之基础与选择器">
+<meta property="og:url" content="https://sheldon22.github.io/2018/03/14/CSS之基础与选择器/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="HTML即 Hypertext Markup Language 是 超文本标记语言 的缩写。HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。 HTML标签由英文尖括号 &amp;lt; 和 &amp;gt; 括起来的，如&amp;lt;html&amp;gt;就是一个标签。html中的标签一般都是成对出现的，分为开始标签和结束标签。结束标签比开始标签多了一个/。标签与标签之">
+<meta property="og:description" content="CSS基础学完了HTML，总算是可以写一个网页出来了，但这个网页没什么样式，比较丑(HTML也不是完全没有样式，只是样式比较少，不如CSS好用)，怎么办呢？这时候就需要CSS来帮忙了。 CSS全名为Cascading Style Sheet, 是用来给网页增加样式的。如何添加CSS呢？有以下三种方式：外部式、内部式、内联式。 a. 外部样式表: 就是把CSS代码写一个单独的外部文件中，这个CSS样">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-13T12:24:14.560Z">
+<meta property="og:updated_time" content="2018-03-14T01:20:08.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML之基础知识与标签">
-<meta name="twitter:description" content="HTML即 Hypertext Markup Language 是 超文本标记语言 的缩写。HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。 HTML标签由英文尖括号 &amp;lt; 和 &amp;gt; 括起来的，如&amp;lt;html&amp;gt;就是一个标签。html中的标签一般都是成对出现的，分为开始标签和结束标签。结束标签比开始标签多了一个/。标签与标签之">
+<meta name="twitter:title" content="CSS之基础与选择器">
+<meta name="twitter:description" content="CSS基础学完了HTML，总算是可以写一个网页出来了，但这个网页没什么样式，比较丑(HTML也不是完全没有样式，只是样式比较少，不如CSS好用)，怎么办呢？这时候就需要CSS来帮忙了。 CSS全名为Cascading Style Sheet, 是用来给网页增加样式的。如何添加CSS呢？有以下三种方式：外部式、内部式、内联式。 a. 外部样式表: 就是把CSS代码写一个单独的外部文件中，这个CSS样">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://sheldon22.github.io/2018/03/13/HTML之基础知识与标签/"/>
+  <link rel="canonical" href="https://sheldon22.github.io/2018/03/14/CSS之基础与选择器/"/>
 
 
 
 
 
-  <title>HTML之基础知识与标签 | 凌云阁</title>
+  <title>CSS之基础与选择器 | 凌云阁</title>
   
 
 
@@ -327,7 +327,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/03/13/HTML之基础知识与标签/">
+    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/03/14/CSS之基础与选择器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Summer">
@@ -344,7 +344,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTML之基础知识与标签</h1>
+          <h1 class="post-title" itemprop="name headline">CSS之基础与选择器</h1>
         
 
         <div class="post-meta">
@@ -356,8 +356,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T20:21:19+08:00">
-                2018-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T08:52:08+08:00">
+                2018-03-14
               </time>
             
 
@@ -372,8 +372,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T20:24:14+08:00">
-                2018-03-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T09:20:08+08:00">
+                2018-03-14
               </time>
             
           </span>
@@ -391,8 +391,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -409,8 +409,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/13/HTML之基础知识与标签/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/13/HTML之基础知识与标签/" itemprop="commentCount"></span>
+                <a href="/2018/03/14/CSS之基础与选择器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/14/CSS之基础与选择器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  939
+                  1,914
                 </span>
               
 
@@ -453,7 +453,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  7
                 </span>
               
             </div>
@@ -474,17 +474,35 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
 
       
-        <p>HTML即 <strong>Hypertext Markup Language</strong> 是 <strong>超文本标记语言</strong> 的缩写。HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
-<p>HTML标签由英文尖括号 &lt; 和 &gt; 括起来的，如<code>&lt;html&gt;</code>就是一个标签。html中的标签一般都是成对出现的，分为开始标签和结束标签。结束标签比开始标签多了一个/。标签与标签之间是可以嵌套的，但先后顺序必须保持一致，如：<code>&lt;div&gt;</code>里嵌套<code>&lt;p&gt;</code>，<code>&lt;/p&gt;</code>必须放在<code>&lt;/div&gt;</code>的前面。</p>
-<p>HTML标签不区分大小写，<code>&lt;h1&gt;</code>和<code>&lt;H1&gt;</code>是一样的，但建议小写，因为大部分程序员都以小写为准。</p>
-<p>HTML文件有自己固定的结构。<code>&lt;html&gt;&lt;/html&gt;</code>称为根标签，所有的网页标签都在<code>&lt;html&gt;&lt;/html&gt;</code>中。<code>&lt;head&gt;</code>标签用于定义文档的头部，它是所有头部元素的容器。<br>编写HTML时要把头部和页面主体body分开。在<code>&lt;body&gt;</code>和<code>&lt;/body&gt;</code>标签之间的内容是网页的主要内容，在这里的标签中的内容会在浏览器中显示出来。</p>
-<p><code>&lt;head&gt;</code>标签的作用: 文档的头部描述了文档的各种属性和信息，包括文档的标题等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。</p>
-<p><code>&lt;title&gt;</code>标签：在<code>&lt;title&gt;</code>和<code>&lt;/title&gt;</code>标签之间的文字内容是网页的标题信息，它会出现在浏览器的标题栏中。网页的title标签用于告诉用户和搜索引擎这个网页的主要内容是什么，搜索引擎可以通过网页标题，迅速的判断出网页的主题。每个网页的内容都是不同的，所以每个网页都应该有一个独一无二的title。</p>
-<p>什么是代码注释？<code>&lt;!-- 注释 --&gt;</code>代码注释的作用是帮助程序员标注代码的用途, 但是注释代码是不会在网页中显示出来的。</p>
-<p>HTML里面有很多标签，比如<code>&lt;p&gt;</code>、<code>&lt;br&gt;</code>、<code>&lt;q&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;a&gt;</code>、<code>&lt;img&gt;</code>。这里着重介绍一下<code>&lt;a&gt;</code>与<code>&lt;img&gt;</code>标签。</p>
-<p><strong>a标签</strong><br>使用id属性为<code>&lt;a&gt;</code>标签创建目标，id属性可以让你直链到这些元素。id所指定的标识符在页面中必须是唯一的。<br><strong>使用target打开新窗口</strong><br>使用target属性，你可以定义被链接的文档在何处显示。<br>如果使用_blank作为目标，浏览器就会打开一个新窗口显示页面。<br>如果使用_self作为目标，浏览器会在当前页面打开。</p>
-<p><strong>img 标签</strong><br>如何在网页里添加图片呢？这时就需要<code>&lt;img&gt;</code>标签来帮忙啦。<code>&lt;img&gt;</code>标签可以在当前网页中添加一张图片。如此例所示：<code>&lt;img src=&quot;images/drink.gif&quot;&gt;</code>, src属性指定了在web页面上显示的图像文件的位置。src属性不只可以用于相对链接，还可以在src属性中放入URL。如果要指向另一个不同网站上的图像，通常会使用这个图像的URL。如果图片因为各种原因无法显示，我们可以利用img的<code>alt</code>属性为访问者提供一些指示，告诉他们图像里包含些什么信息。使用<code>alt</code>属性是为了给那些不能看到你文档中图像的浏览者提供文字说明。而使用<code>title</code>属性提供非本质的额外信息。通过使用width和height，我们还可以为<code>&lt;img&gt;</code>标签调整大小。宽度和高度都使用像素数来指定。</p>
-<p><strong>注：仅供个人学习使用，侵删</strong></p>
+        <h4 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h4><p>学完了HTML，总算是可以写一个网页出来了，但这个网页没什么样式，比较丑(HTML也不是完全没有样式，只是样式比较少，不如CSS好用)，怎么办呢？这时候就需要CSS来帮忙了。</p>
+<p>CSS全名为Cascading Style Sheet, 是用来给网页增加样式的。如何添加CSS呢？有以下三种方式：外部式、内部式、内联式。</p>
+<p>a. <strong>外部样式表</strong>: 就是把CSS代码写一个单独的外部文件中，这个CSS样式文件以”.CSS”为扩展名。</p>
+<p>通过<code>link</code>引入CSS，<code>link</code>标签位置一般写在<code>head</code>标签之内。<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;1.css&quot;&gt;</code></p>
+<p>通过<code>@import</code>引入样式，放入css中，不要忘记分号。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    @import url(&quot;index.css&quot;);</span><br><span class="line">    @import url(&apos;index.css&apos;);</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><code>link</code>和<code>@import</code>的区别？link是XHTML标签，除了加载css外，还可以定义RSS，定义rel链接属性等，@import属于css范畴，只能加载css。link引入css时，在页面加载时同时加载，@import需要在网页完全载入以后加载。link是XHTML标签，无兼容性的问题，@import是在CSS2.1提出的，低版本的浏览器不支持。link支持使用javascript控制DOM去改变样式，而@import不支持。</p>
+<p>b. <strong>内部</strong>样式表：将CSS放在页面的<code>&lt;style&gt;</code>元素中</p>
+<p>c. <strong>内联</strong>样式表：<code>&lt;p style=&quot;background: orange; font-size: 24px;&quot;&gt;CSS&lt;p&gt;</code></p>
+<p>这三种样式表是有优先级的: 内联式 &gt; 内部式 &gt; 外部式，但是内部式 &gt; 外部式有一个前提：内部式CSS样式表的位置一定在外部式的后面。总结来说，遵循<strong>就近</strong>原则(离被设置元素越近优先级别越高)。</p>
+<p>CSS注释代码：用<code>/*注释语句*/</code>来表明(Html中使用<code>&lt;!--注释语句--&gt;)</code>。</p>
+<h4 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h4><p><strong>PX</strong>: 用像素指定字体大小时，是告诉浏览器字母高度是多少像素。如14px的意思是，设置高度为14像素的字体，这说明字母的最低部分与最高部分之间有14像素。</p>
+<p><strong>百分比(%)</strong>: 用像素指定字体大小时，会明确的指出字体有多大，但用百分比指定字体大小时，会相对于另一个字体大小指出这个字体有多大。如<code>font-size: 110%</code>的意思是说这个字体大小应该是另一个字体大小的110%。而这里的另一个字体一般是指<strong>父元素</strong>的字体大小。</p>
+<p><strong>em</strong>: 是<strong>该元素所设置</strong>的字体的大小(比如不设置时是字体是20px，那2em就是40px)</p>
+<p><strong>rem</strong>: <strong>根元素</strong>(html节点)字体大小的倍数。中文版的Chrome不支持把<code>font-size</code>设置到到12px以下，因此可以考虑给根元素设`置font-。IE8及以下不支持 rem。Tips: can I use.com查询兼容性。</p>
+<p>vw, vh：1vw = 1% 视口宽度, 1vh = 1% 视口高度</p>
+<p>width: 100%是什么意思? 设置元素content的宽度等于<strong>父容器</strong>content的宽度。对块级元素不要随便加width: 100%。</p>
+<h4 id="web颜色"><a href="#web颜色" class="headerlink" title="web颜色"></a>web颜色</h4><p>web颜色是按照构成颜色的红、绿、蓝三个部分所占的比例来决定的。每种颜色会分别指定一个从0到100%的数值，然后把它们混合起来得到最终的颜色。</p>
+<h5 id="如何指定颜色？"><a href="#如何指定颜色？" class="headerlink" title="如何指定颜色？"></a>如何指定颜色？</h5><p>a. 按照颜色的名字。</p>
+<p>b. 用红、绿、蓝的值来指定颜色。可以用rgb(80%, 40%, 0%)来表示。rgb是red, green, blue的缩写。还可以将红绿蓝值指定为0-255之间的一个数值。如rgb(204, 102, 0)，这些数值怎么来的？用255*各自的百分比。</p>
+<p>c. 用十六进制码来指定颜色。一个十六进制码中，每组2位数字分别代表颜色的红绿蓝值。所以前两位数字表示红色，中间两位表示绿色，最后两位表示蓝色。</p>
+<h5 id="何为十六进制码？"><a href="#何为十六进制码？" class="headerlink" title="何为十六进制码？"></a>何为十六进制码？</h5><p>16进制码之所以被称为16进制码，是因为它们不是基于10个数字(0-9)，而是基于16个数字组成的(0-F)。9后面的数字用字母a, b, c, d, e, f来代替。分别对应着10，11，12，13，14，15。</p>
+<h5 id="如何将十六进制码转换为十进制？"><a href="#如何将十六进制码转换为十进制？" class="headerlink" title="如何将十六进制码转换为十进制？"></a>如何将十六进制码转换为十进制？</h5><p>举个例子来说，如把CC转换为十进制，先取最右边的数，写出它的十进制值为12，再取最左边的数，转换为十进制后乘以16，最后将这两个数相加。</p>
+<h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><p>CSS样式由选择符和声明组成，而声明又由属性和值组成。选择符又称选择器，”选择器”指明了声明中”样式”的作用对象，也就是”样式”作用于网页中的哪些元素。在｛｝中的内容就是声明，属性和值之间用 : 分隔，当有多条声明时，中间以 ; 分隔。选择器有很多种，有标签选择器，类选择器，ID选择器，子选择器，伪类选择符…</p>
+<p>#####元素选择器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">div &#123;</span><br><span class="line">  color: blue;&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a><strong>类</strong>选择器</h5><p>类选择器(Class Selectors)以 . 开头，后面加上类名，可以为类选择器取任何的名字，不过最好不要取中文的名字。一个CSS类可以应用到多个不同的元素，一个元素也可以应用多个不同的CSS 类。<br>如果省略所有元素名，只有一个点，后面是类名，那么这个规则会应用到这个类的所有成员。如果你希望一个元素拥有不同类中定义的不同样式，就要使用到多个类。如果一个元素属于多个类，那么CSS会选择文件中<strong>最后</strong>列出的规则即<strong>最靠后</strong>的那个。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li class=&quot;first done&quot;&gt;起床&lt;/li&gt;</span><br><span class="line">  &lt;li class=&quot;second done&quot;&gt;刷牙&lt;/li&gt;</span><br><span class="line">  &lt;li class=&quot;third&quot;&gt;洗脸&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">.first &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line">.done &#123;</span><br><span class="line">  text-decoration: line-through;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a><strong>ID</strong>选择器</h5><p>在很多方面，ID选择器都类似于类选择器，但它们之间也有区别，如它们的名字不同，id=”ID名称”， class=”类名称”。ID选择符的前面是 # 号，而不是 .<br>与类选择器不同，在一个HTML文档中，id属性的<strong>名字</strong>必须是<strong>唯一</strong>的(即页面上不允许多个元素有相同的ID名)，一个元素只能有一个ID。而类选择器可以使用多次。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;notification&quot;&gt;通知：明天放假&lt;/p&gt;</span><br><span class="line">#notification &#123;</span><br><span class="line">  font-size: 24px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器"></a><strong>通用</strong>选择器</h5><p>通用选择器(Universal Selector)是功能最强大的选择器，它使用一个*号指定，它的作用是匹配html中所有标签元素。</p>
+<h5 id="其他选择器"><a href="#其他选择器" class="headerlink" title="其他选择器"></a><strong>其他</strong>选择器</h5><p><strong>子</strong>选择器，即 <strong>&gt;</strong>, 用于选择指定标签元素的第一代子元素。<br><strong>后代</strong>选择器，即加入空格 , 用于选择指定标签元素下的后辈元素。如：<code>.first  div{color:green;}</code><br>子选择器（child selector）仅是指它的<strong>直接</strong>后代，而后代选择器则是作用于<strong>所有子后代</strong>元素。<strong>后代</strong>选择器通过<strong>空格</strong>来进行选择，而<strong>子</strong>选择器是通过 <strong>&gt;</strong> 来进行选择。<br><strong>总结</strong>：&gt; 作用于元素的第一代后代，空格作用于元素的所有后代。</p>
+<h5 id="伪类与伪元素"><a href="#伪类与伪元素" class="headerlink" title="伪类与伪元素"></a><strong>伪类与伪元素</strong></h5><p><strong>伪类</strong>用于当已有元素处于的<strong>某个状态</strong>时，为其添加对应的样式，这个状态是根据<strong>用户行为</strong>而<strong>动态变化</strong>。<br><strong>伪元素</strong>用于创建一些<strong>不在文档树</strong>中的<strong>元素</strong>，并为其添加<strong>样式</strong>。</p>
 
       
     </div>
@@ -502,7 +520,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
         <div class="post-tags">
           
-            <a href="/tags/HTML/" rel="tag"># HTML</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
         </div>
       
@@ -515,8 +533,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/13/关于Hexo/" rel="next" title="关于Hexo">
-                <i class="fa fa-chevron-left"></i> 关于Hexo
+              <a href="/2018/03/13/HTML之表格与表单/" rel="next" title="HTML之表格与表单">
+                <i class="fa fa-chevron-left"></i> HTML之表格与表单
               </a>
             
           </div>
@@ -524,10 +542,6 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/13/HTML之表格与表单/" rel="prev" title="HTML之表格与表单">
-                HTML之表格与表单 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,8 +596,17 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -697,6 +720,22 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS基础"><span class="nav-number">1.</span> <span class="nav-text">CSS基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字体大小"><span class="nav-number">2.</span> <span class="nav-text">字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web颜色"><span class="nav-number">3.</span> <span class="nav-text">web颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何指定颜色？"><span class="nav-number">3.1.</span> <span class="nav-text">如何指定颜色？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#何为十六进制码？"><span class="nav-number">3.2.</span> <span class="nav-text">何为十六进制码？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何将十六进制码转换为十进制？"><span class="nav-number">3.3.</span> <span class="nav-text">如何将十六进制码转换为十进制？</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择器"><span class="nav-number">4.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类选择器"><span class="nav-number">4.1.</span> <span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ID选择器"><span class="nav-number">4.2.</span> <span class="nav-text">ID选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通用选择器"><span class="nav-number">4.3.</span> <span class="nav-text">通用选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他选择器"><span class="nav-number">4.4.</span> <span class="nav-text">其他选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪类与伪元素"><span class="nav-number">4.5.</span> <span class="nav-text">伪类与伪元素</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
