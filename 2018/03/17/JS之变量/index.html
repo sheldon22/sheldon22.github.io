@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="变量概述变量是用于保存值的占位符。定义变量时要使用var操作符(var是一个关键字)，后跟变量名(即一个标识符)。var message这行代码定义了一个名为message的变量，该变量可以用来保存任何值(像这样未经过初始化的变量，会保存一个特殊的值undefined。ECMAScript也支持直接初始化变量，初始化的过程就是给变量赋值。 我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-17T08:21:52.323Z">
+<meta property="og:updated_time" content="2018-03-17T08:48:14.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之变量">
 <meta name="twitter:description" content="变量概述变量是用于保存值的占位符。定义变量时要使用var操作符(var是一个关键字)，后跟变量名(即一个标识符)。var message这行代码定义了一个名为message的变量，该变量可以用来保存任何值(像这样未经过初始化的变量，会保存一个特殊的值undefined。ECMAScript也支持直接初始化变量，初始化的过程就是给变量赋值。 我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T16:21:52+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T16:48:14+08:00">
                 2018-03-17
               </time>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,782
+                  1,421
                 </span>
               
 
@@ -453,7 +453,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  5
                 </span>
               
             </div>
@@ -481,10 +481,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>如果只是声明了一个变量而没有对它进行赋值，那该变量的值是<strong>undefined</strong>。undefined是一个JS关键字，表示”无定义”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var b</span><br><span class="line">console.log(b)</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure></p>
 <p>如果一个变量没有声明就直接使用，JavaScript会报错，告诉你变量未定义。<br><code>x  // Reference Error: x is not defined</code></p>
 <p>在函数<strong>外部</strong>的变量使用了<code>var</code>声明，那就是<strong>全局</strong>变量。而在函数<strong>内部</strong>的变量只有使用<code>var</code>声明的变量才是<strong>局部</strong>变量。</p>
-<p>声明变量的时候，使用var关键字声明和不用关键字声明到底有什么区别呢？<br><code>var x = 7</code>是在<strong>当前域</strong>中声明变量。如果是在<strong>函数</strong>中声明，则为<strong>局部</strong>变量。如果在<strong>全局</strong>域中声明，则为<strong>全局</strong>变量。而<code>x = 7</code>事实上是对<strong>属性</strong>进行赋值。</p>
-<p>首先，它会尝试在当前作用域链(如在函数中声明，则当前作用域链包含全局作用域和函数局部作用域)中解析x；如果在当前作用域链中找到x，则会对x属性进行赋值；如果没有找到x，它才会在<strong>全局</strong>对象(即当前作用域链的最顶层对象如window对象)中创造x属性并赋值。</p>
-<p>它并不是声明了一个全局变量，而是创建了一个全局对象的<strong>属性</strong>。”变量声明”跟”创建对象属性”又有什么区别呢？事实上，JS的变量声明、创建属性以及JS中的每个属性都有一定的标志说明它们的属性—-如只读、不可枚举、不可删除等等。由于变量声明自带不可删除属性, 在比较var x = 7跟 x = 7时, 前者是变量声明，带不可删除属性，因此无法被删除。后者为全局变量的一个属性，因此可以从全局变量中删除。</p>
-<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>JavaScript引擎的工作方式是：先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的<strong>声明</strong>语句，都会被提升到代码的<strong>头部</strong>，可以将这个过程形象地想象成所有的声明(变量和函数)都会被”移动”到各自作用域的最顶端，这个过程被称为提升。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x);</span><br><span class="line">var x = 5;</span><br></pre></td></tr></table></figure></p>
+<h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>JavaScript引擎的工作方式是：先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的<strong>声明</strong>语句，都会被提升到代码的<strong>头部</strong>，可以将这个过程形象地想象成所有的声明(变量和函数)都会被”移动”到各自作用域的最顶端，这个过程被称为提升。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x);</span><br><span class="line">var x = 5;</span><br></pre></td></tr></table></figure></p>
 <p>上面代码使用console.log方法，在控制台(console)显示变量x的值。这时变量x还没有声明和赋值，应该会导致报错，但实际运行后并不会报错。是因为存在着变量提升，真正运行的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x;</span><br><span class="line">console.log(x);</span><br><span class="line">x = 5;</span><br></pre></td></tr></table></figure></p>
 <p>结果是显示undefined，表示变量x已声明，但还未赋值。变量提升只对<strong>var</strong>命令声明的变量有效，如果一个变量不是用var命令声明的，就不会发生变量提升。</p>
 <p>函数声明和变量声明都会被提升。但<strong>函数</strong>会先被提升，然后才是变量。尽管重复的用var声明一个变量会被忽略掉，但出现在后面的函数声明还是可以覆盖前面的函数声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;test&quot;;</span><br><span class="line">function a()&#123;</span><br><span class="line">	console.log(x);  //输出&quot;undefined&quot;，而不是&quot;test或testing&quot;</span><br><span class="line">	var x = &quot;testing&quot;;  //变量在这里赋初始值，但变量本身在函数体内任何地方均是有定义的</span><br><span class="line">	console.log(x); //输出&quot;testing&quot;</span><br><span class="line">&#125;</span><br><span class="line">a.call()</span><br></pre></td></tr></table></figure></p>
@@ -726,7 +723,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量概述"><span class="nav-number">1.</span> <span class="nav-text">变量概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量声明"><span class="nav-number">2.</span> <span class="nav-text">变量声明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升"><span class="nav-number"></span> <span class="nav-text">变量提升</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量与引用"><span class="nav-number">1.</span> <span class="nav-text">变量与引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量概述"><span class="nav-number">1.</span> <span class="nav-text">变量概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量声明"><span class="nav-number">2.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量提升"><span class="nav-number">3.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量与引用"><span class="nav-number">4.</span> <span class="nav-text">变量与引用</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +757,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.0k</span>
+    <span title="Site words total count">13.6k</span>
   
 </div>
 
