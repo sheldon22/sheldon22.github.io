@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-19T07:01:01.104Z">
+<meta property="og:updated_time" content="2018-03-19T07:18:30.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之函数">
 <meta name="twitter:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T15:01:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T15:18:30+08:00">
                 2018-03-19
               </time>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,189
+                  4,170
                 </span>
               
 
@@ -495,22 +495,23 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><p>在ECMASscript中的代码有三种类型：<code>global</code>, <code>function</code>和<code>eval</code>。<strong>全局</strong>环境(JS代码运行会<strong>首先</strong>进入该环境)，函数环境(当函数被调用执行时，会进入当前函数中执行代码)，<code>eval</code>(不建议使用，可忽略)。</p>
 <p>每一种代码的执行都需要依赖自身的上下文。函数的每一次调用，都会进入函数执行中的上下文，并且计算函数中变量等的值。<code>eval</code>函数的每一次执行，也会进入<code>eval</code>执行中的上下文，判断应该从何处获取变量的值。</p>
 <p>一个<code>function</code>可能产生无限的上下文环境，因为函数的调用(甚至递归)都会产生一个新的上下文环境。一个执行上下文可以激活另一个上下文，就好比一个函数调用了另一个函数，然后一层一层调用下去。这种实现方式是栈，我们称它为上下文堆栈。</p>
-<p><strong>激活其它上下文</strong>的某个上下文为<strong>调用者</strong>(<code>caller</code>)。<strong>被激活</strong>的上下文为<strong>被调用者</strong>(<code>callee</code>) 。被调用者同时也有可能是调用者。当一个<code>caller</code>激活了一个<code>callee</code>，那么这个<code>caller</code>就会暂停它自身的执行，然后将控制权交给这个<code>callee</code>. 于是这个<code>callee</code>被放入堆栈，成为<strong>进行</strong>中的上下文. 当这个<code>callee</code>的上下文结束之后，会把控制权再次交给它的<code>caller</code>，然后<code>caller</code>会在刚才暂停的地方继续执行。在这个<code>caller</code>结束之后, 会继续触发其他的上下文。一个<code>callee</code>可以用返回<code>return</code>或者抛出异常<code>exception</code>来结束自身的上下文。</p>
+<p><strong>激活其它上下文</strong>的某个上下文为<strong>调用者</strong>(<code>caller</code>)。<strong>被激活</strong>的上下文为<strong>被调用者</strong>(<code>callee</code>) 。被调用者同时也有可能是调用者。当一个<code>caller</code>激活了一个<code>callee</code>，那么这个<code>caller</code>就会暂停它自身的执行，然后将控制权交给这个<code>callee</code>。于是这个<code>callee</code>被放入堆栈，成为<strong>进行</strong>中的上下文。当这个<code>callee</code>的上下文结束之后，会把控制权交还给它的<code>caller</code>，然后<code>caller</code>会在刚才暂停的地方继续执行。在这个<code>caller</code>结束之后，会继续触发其他的上下文。一个<code>callee</code>可以用返回<code>return</code>或者抛出异常<code>exception</code>来结束自身的上下文。</p>
 <p>所有的ECMAScript的程序执行都可以看做是一个<strong>执行上下文堆栈</strong>。堆栈的<strong>顶部</strong>就是处于<strong>激活</strong>状态的上下文。每一种代码的执行都需要依赖自身的上下文。可以将执行上下文理解为函数执行的环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var size = &apos;large&apos;;</span><br><span class="line"></span><br><span class="line">function changeSize() &#123;</span><br><span class="line">   var otherSize = &apos;small&apos;;</span><br><span class="line">   function exchangeSize() &#123;</span><br><span class="line">     	var tempsize = otherSize;</span><br><span class="line">   &#125;</span><br><span class="line">   exchangeSize();</span><br><span class="line">&#125;</span><br><span class="line">changeSize();</span><br></pre></td></tr></table></figure></p>
-<p><code>ECStack</code>即执行上下文组的堆栈。<br>a. <strong>首先</strong>是<strong>全局</strong>上下文入栈。全局上下文入栈之后，其中的执行代码开始执行，遇到了<code>changeSize()</code>，激活函数<code>changeSize</code>创建它自己的执行上下文。<br>b. <code>changeSize</code>的执行上下文入栈。<code>changeSize</code>的上下文入栈之后，控制器开始执行其中的可执行代码，遇到<code>exchangeSize()</code>之后又激活了一个执行上下文。<br>c. <code>exchangeSize</code>的执行上下文入栈。在<code>exchangeSize</code>的执行代码中，再没有遇到其他能生成执行上下文的情况，因此这段代码执行完毕后，<code>exchangeSize</code>的上下文从栈中弹出。<code>exchangeSize</code>的执行上下文弹出之后，继续执行changeSize的可执行代码，也没有再遇到其他执行上下文，执行完毕之后弹出。这样，ECStack中就只剩下全局上下文了。<strong>全局</strong>上下文在<strong>浏览器窗口关闭后出栈</strong>。在函数中遇到<code>return</code>就会直接终止当前执行代码的执行，因此会直接将当前上下文弹出栈。</p>
-<p>执行上下文特点是单线程。同步执行，只有<strong>栈顶</strong>的上下文处于<strong>执行</strong>中, 其他上下文需要等待。函数的执行上下文的个数没有限制。每次某个函数被调用，就会有个新的执行上下文为其创建, 即使是调用的自身函数，也是如此。</p>
+<p><code>ECStack</code>即执行上下文组的堆栈。<br>a. <strong>首先</strong>是<strong>全局</strong>上下文入栈。全局上下文入栈之后，其中的执行代码开始执行，遇到了<code>changeSize()</code>，激活函数<code>changeSize</code>创建它自己的执行上下文。<br>b. <code>changeSize</code>的执行上下文入栈。<code>changeSize</code>的上下文入栈之后，控制器开始执行其中的可执行代码，遇到<code>exchangeSize()</code>之后又激活了一个执行上下文。<br>c. <code>exchangeSize</code>的执行上下文入栈。在<code>exchangeSize</code>的执行代码中，再没有遇到其他能生成执行上下文的情况，因此这段代码执行完毕后，<code>exchangeSize</code>的上下文从栈中弹出。<code>exchangeSize</code>的执行上下文弹出之后，继续执行<code>changeSize</code>的可执行代码，也没有再遇到其他执行上下文，执行完毕之后弹出。这样，ECStack中就只剩下全局上下文了。<strong>全局</strong>上下文在<strong>浏览器窗口关闭后出栈</strong>。在函数中遇到<code>return</code>就会直接终止当前执行代码的执行，因此会直接将当前上下文弹出栈。</p>
+<p>执行上下文特点是单线程。同步执行，只有<strong>栈顶</strong>的上下文处于<strong>执行</strong>中, 其他上下文需要等待。函数的执行上下文的个数没有限制。每次某个函数被调用，就会有个新的执行上下文为其创建，即使是调用的自身函数，也是如此。</p>
 <h5 id="变量对象"><a href="#变量对象" class="headerlink" title="变量对象"></a>变量对象</h5><p>一个执行的上下文可以抽象的理解为object。每一个执行的上下文都有一系列的属性(我们称为上下文状态)，他们用来追踪关联代码的执行进度。如果变量与执行上下文相关，那变量自己应该知道它的数据存储在哪里，并且知道如何访问。这种机制称为<strong>变量对象</strong>(variable object)。</p>
 <p>变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容：<br>a. <strong>函数声明</strong>(FunctionDeclaration, 缩写为FD);<br>b. <strong>函数的形参</strong><br>c. <strong>变量(var, 变量声明)</strong>;</p>
 <h6 id="全局上下文中的变量对象"><a href="#全局上下文中的变量对象" class="headerlink" title="全局上下文中的变量对象"></a>全局上下文中的变量对象</h6><p>全局对象(Global object)是在进入任何执行上下文之前就已经创建了的对象，这个对象是唯一的，它的属性在程序中任何地方都可以访问，全局对象的生命周期终止于程序退出那一刻。</p>
-<h6 id="函数上下文中的变量对象"><a href="#函数上下文中的变量对象" class="headerlink" title="函数上下文中的变量对象"></a>函数上下文中的变量对象</h6><p>在函数执行上下文中VO是不能直接访问的，此时由活动对象(activation object缩写为AO)扮演VO的角色。变量对象和活动对象其实都是同一个对象，只是处于执行上下文的<strong>不同</strong>生命周期。只有处于函数调用栈<strong>栈顶</strong>的执行上下文中的变量对象，才会变成活动对象。<br>当<strong>调用</strong>一个函数时，一个新的执行上下文就会被创建。而一个执行上下文的生命周期可以分为两个阶段<br>a. 创建阶段，在这个阶段中, 执行上下文会分别创建<strong>变量对象</strong>, <strong>建立作用域链</strong>, 以及确定<strong>this的指向</strong>。<br>b. 执行代码，创建完成之后，就会开始执行代码，这个时候，会完成变量赋值，函数引用，以及执行其他代码。</p>
+<h6 id="函数上下文中的变量对象"><a href="#函数上下文中的变量对象" class="headerlink" title="函数上下文中的变量对象"></a>函数上下文中的变量对象</h6><p>在函数执行上下文中VO是不能直接访问的，此时由活动对象(activation object缩写为AO)扮演VO的角色。变量对象和活动对象其实都是同一个对象，只是处于执行上下文的<strong>不同</strong>生命周期。只有处于函数调用栈<strong>栈顶</strong>的执行上下文中的变量对象，才会变成活动对象。<br>当<strong>调用</strong>一个函数时，一个新的执行上下文就会被创建。而一个执行上下文的生命周期可以分为两个阶段<br>a. 创建阶段，在这个阶段中, 执行上下文会分别创建<strong>变量对象</strong>， <strong>建立作用域链</strong>，以及确定<strong>this的指向</strong>。<br>b. 执行代码，创建完成之后，就会开始执行代码，这个时候，会完成变量赋值，函数引用，以及执行其他代码。</p>
 <p>变量对象<strong>创建</strong>的过程<br>a. 建立<code>arguments</code>对象。检查当前上下文中的参数，建立该对象下的属性与属性值。<br>b. 检查当前上下文的<strong>函数</strong>声明，也就是使用<code>function</code>关键字声明的函数。在变量对象中以<strong>函数名</strong>建立一个属性，属性值为指向该函数所在内存地址的引用。如果函数名的属性已经存在，那么该属性将会被新的引用所覆盖。<code>function</code>声明的优先级比<code>var</code>声明的高。所以会先处理函数声明，再处理变量声明。<br>c. 检查当前上下文中的<strong>变量</strong>声明，每找到一个变量声明，就在变量对象中以变量名建立一个属性，属性值为undefined。如果该变量名的属性已经存在，为了防止同名的函数被修改为undefined，则会直接跳过，原属性值不会被修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function test(a, b) &#123;</span><br><span class="line">    var c = 10;</span><br><span class="line">    function d() &#123;&#125;</span><br><span class="line">    var e = function _e() &#123;&#125;;</span><br><span class="line">    (function x() &#123;&#125;);</span><br><span class="line">&#125;</span><br><span class="line">test(10); 	// call</span><br></pre></td></tr></table></figure></p>
 <p>当进入带有参数10的test函数上下文时，AO表现为如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">AO(test) = &#123;</span><br><span class="line">  a: 10,</span><br><span class="line">  b: undefined,</span><br><span class="line">  c: undefined,</span><br><span class="line">  d: &lt;reference to FunctionDeclaration &quot;d&quot;&gt;</span><br><span class="line">  e: undefined</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>注意AO里并不包含函数”x”。因为”x”是一个函数表达式而不是函数声明，函数表达式不会影响VO。不管怎样，函数”_e”同样也是函数表达式，但是就像我们下面将看到的那样，因为它分配给了变量”e”，所以它可以通过名称”e”来访问。这一系列操作完成以后就进入了执行上下文的第二个阶段，执行代码。</p>
-<p><strong>代码执行</strong><br>这个周期内，AO/VO已经拥有了属性(不过，并不是所有的属性都有值，大部分属性的值还是系统默认的初始值undefined)。在代码执行阶段，会再次修改变量对象的属性值。<br>还是前面那个例子, AO/VO在代码解释期间被修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AO[&apos;c&apos;] = 10;</span><br><span class="line">AO[&apos;e&apos;] = &lt;reference to FunctionExpression &quot;_e&quot;&gt;;</span><br></pre></td></tr></table></figure></p>
-<p>再次注意，因为<code>FunctionExpression&quot;e&quot;</code>保存到了已声明的变量”e”上，所以它仍然存在于内存中。而<code>FunctionExpression&quot;x&quot;</code>却不存在于AO/VO中，也就是说如果我们想尝试调用”x”函数，不管在函数定义之前还是之后，都会出现一个错误<code>&quot;x is not defined&quot;</code>，未保存的函数表达式只有在它自己的定义或递归中才能被调用。</p>
+<p>注意AO里并不包含函数”x”。因为”x”是一个函数表达式而不是函数声明，函数表达式不会影响AO。函数”_e”同样也是函数表达式，但因为它分配给了变量”e”，所以它可以通过”e”来访问。这一系列操作完成以后就会进入执行上下文的第二个阶段，执行代码。</p>
+<p><strong>代码执行</strong><br>这个周期内，AO/VO已经拥有了属性(不过并不是所有的属性都有值，大部分属性的值还是系统默认的初始值<code>undefined</code>)。在代码执行阶段，会修改变量对象的初始值。AO/VO在代码解释期间被修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AO[&apos;c&apos;] = 10;</span><br><span class="line">AO[&apos;e&apos;] = &lt;reference to FunctionExpression &quot;_e&quot;&gt;;</span><br></pre></td></tr></table></figure></p>
+<p>因为<code>FunctionExpression&quot;e&quot;</code>保存到了已声明的变量”e”上，所以它仍然存在于内存中。而<code>FunctionExpression&quot;x&quot;</code>却不存在于AO/VO中，也就是说如果我们想尝试调用”x”函数，不管在函数定义之前还是之后，都会出现一个错误<code>&quot;x is not defined&quot;</code>，未保存的函数表达式只有在它自己的定义或递归中才能被调用。</p>
 <h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>当前ECMAScript规范指出独立作用域只能通过<code>function</code>类型的执行上下文创建。作用域与执行上下文是两个完全不同的概念。作用域是一套规则, 这套规则用来管理引擎如何在当前作用域以及嵌套的子作用域中根据<strong>标识符名称</strong>进行变量查找。JS采用的是<strong>词法</strong>作用域。词法作用域意味着作用域是由<strong>书写代码时函数声明的位置</strong>来决定的。</p>
-<p>在JS中有以下两种作用域，全局作用域与函数作用域。<br>全局作用域是函数之外(最外层代码)的作用域。在函数之外进行声明的名称属于全局作用域。这些名称就是所谓的全局变量以及全局函数。这些变量在整个程序中一直存在，在所有地方都可以读取。<br>而在函数内进行声明的名称拥有的是函数作用域，它们仅在该函数内部才有效，外部无法读取。在函数体内，<strong>局部</strong>变量的<strong>优先级高于同名</strong>的<strong>全局</strong>变量。如果在函数内声明的一个局部变量或者函数参数中带有的变量和全局变量重名，那么全局变量就被局部变量所遮盖。</p>
-<p>如果不同文件中有两个同名的函数，将使用浏览器最后看到的那个函数。</p>
+<p>在JS中有以下两种作用域，全局作用域与函数作用域。<br>全局作用域是函数之外(最外层代码)的作用域。在函数之外进行声明的名称属于全局作用域。这些名称就是所谓的全局变量以及全局函数。这些变量在整个程序中一直存在，在所有地方都可以读取。</p>
+<p>而在函数内进行声明的名称拥有的是函数作用域，它们仅在该函数内部才有效，外部无法读取。在函数体内，<strong>局部</strong>变量的<strong>优先级高于同名</strong>的<strong>全局</strong>变量。如果在函数内声明的一个局部变量或者函数参数中带有的变量和全局变量重名，那么全局变量就被局部变量所遮盖。</p>
+<p>如果不同文件中有两个同名的函数，浏览器会使用最后看到的那个函数。</p>
 <p>作用域链，是由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。遍历嵌套作用域链的规则是引擎从当前的执行作用域开始查找变量，如果找不到，就向上一级继续查找。当抵达最外层的全局作用域时，无论找到还是没找到，查找过程都会停止。如果在多层嵌套的作用域中有同名的变量，就以找到的第一个匹配的变量为准。</p>
 <p>参考文献：</p>
 <ol>
@@ -519,7 +520,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <li><a href="https://segmentfault.com/a/1190000012646203" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012646203</a></li>
 <li><a href="https://segmentfault.com/a/1190000012646211" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012646211</a></li>
 <li><a href="https://segmentfault.com/a/1190000012646221" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012646221</a></li>
-<li></li>
+<li><a href="https://github.com/mqyqingfeng/Blog/issues/4" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/4</a></li>
+<li><a href="http://javascript.ruanyifeng.com/grammar/function.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/grammar/function.html</a></li>
 </ol>
 
       
@@ -776,7 +778,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.0k</span>
+    <span title="Site words total count">18.9k</span>
   
 </div>
 
