@@ -101,7 +101,7 @@
 <meta property="og:description" content="对象是什么JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是动态的，可以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://sheldon22.github.io/2018/03/18/JS之对象/0.png">
-<meta property="og:updated_time" content="2018-03-19T03:04:49.942Z">
+<meta property="og:updated_time" content="2018-03-19T05:31:32.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之对象">
 <meta name="twitter:description" content="对象是什么JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是动态的，可以">
@@ -374,7 +374,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T11:04:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T13:31:32+08:00">
                 2018-03-19
               </time>
             
@@ -439,7 +439,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,228
+                  1,206
                 </span>
               
 
@@ -477,19 +477,19 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
       
         <h4 id="对象是什么"><a href="#对象是什么" class="headerlink" title="对象是什么"></a>对象是什么</h4><p>JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是<strong>动态</strong>的，可以新增属性也可以删除属性。对象也是<strong>可变</strong>的，我们通过<strong>引用</strong>而非值来操作对象。</p>
-<p>属性包括名字和值。属性名可以是包含空字符串在内的任意字符串，但对象中不能存在两个<strong>同名</strong>的属性。属性值可以被指定为任意类型的值，包括数组或其他的对象，属性值甚至还可以是一个函数。如果一个<strong>属性</strong>的值为<strong>函数</strong>，通常把这个属性称为<strong>“方法”</strong>，它可以像函数那样调用。</p>
-<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><p>可以通过对象直接量、关键字new和Object.create()函数来创建对象。<br>对象字面量表达式的语法: <code>{ 属性名: 属性值, 属性名: 属性值, …… }</code><br><code>var x = {a: &#39;Hello World&#39;}</code><br>上面代码中，<strong>大括号</strong>就<strong>定义</strong>了一个<strong>对象</strong>，它被赋值给变量<code>x</code>。这个对象内部包含一个键值对(又称为”成员”)，<code>a</code>是<strong>“键名”</strong>(成员的名称)，字符串<code>Hello World</code>是<strong>“键值”</strong>(成员的值)。键名与键值之间用<strong>冒号</strong>分隔。如果对象内部包含多个键值对，每个键值对之间用<strong>逗号</strong>分隔。</p>
-<p>对象的所有键名都是字符串，所以加不加引号都可以。如果键名不符合标识名的条件(比如第一个字符为数字，或者含有空格或运算符)，则必须加上引号，否则会报错。属性可以<strong>动态</strong>创建，不必在对象声明时就指定。</p>
-<p>如果不同的变量名指向同一个对象，那么它们都是这个对象的引用，也就是说指向同一个内存地址。修改其中一个变量，会影响到其他所有变量。如果取消某一个变量对于原对象的引用，不会影响到另一个变量。这种引用只局限于<strong>对象</strong>，如果两个变量指向同一个原始类型的值，这时的变量是值的拷贝。</p>
-<h4 id="属性的操作"><a href="#属性的操作" class="headerlink" title="属性的操作"></a>属性的操作</h4><p>可以通过<strong>点(.)</strong>或<strong>方括号([])</strong>运算符来获取属性的值。只要在点运算符之后书写<strong>属性名</strong>，就能够读取相应的属性值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x.a);</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure></p>
+<p>如果不同的变量名指向同一个对象，那么它们都是这个对象的引用，也就是说指向同一个<strong>内存地址</strong>。修改其中一个变量，会影响到其他的变量。如果取消某一个变量对于原对象的引用，不会影响到另一个变量。这种引用只局限于<strong>对象</strong>，如果两个变量指向同一个原始类型的值，这时的变量是值的拷贝。</p>
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><p>可以通过对象直接量、关键字new和Object.create()函数来创建对象。<br>对象字面量表达式的语法: 以<code>{</code>开头，以<code>}</code>结尾，<code>{ 属性名: 属性值, 属性名: 属性值, …… }</code>。<br><code>var x = {a: &#39;Hello World&#39;}</code><br>这个对象内部包含一个键值对(又称为”成员”)，<code>a</code>是<strong>“键名”</strong>(成员的名称)，字符串<code>Hello World</code>是<strong>“键值”</strong>(成员的值)。键名与键值之间用<strong>冒号</strong>分隔。如果对象内部包含多个键值对，每个键值对之间用<strong>逗号</strong>分隔。</p>
+<p>对象的所有键名都是字符串，所以加不加引号都可以。如果<strong>键名不符合标识名的条件</strong>(比如第一个字符为数字，或者含有空格或运算符)，就<strong>必须加上引号</strong>，否则会报错。属性可以<strong>动态</strong>创建，不必在对象声明时就指定。</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>属性包括名字和值。属性名可以是包含空字符串在内的任意字符串，但对象中不能存在两个<strong>同名</strong>的属性。属性值可以被指定为任意类型的值，包括数组或其他的对象，属性值甚至还可以是一个函数。如果一个<strong>属性</strong>的值为<strong>函数</strong>，通常把这个属性称为<strong>“方法”</strong>，它可以像函数那样调用。</p>
+<p>通过<strong>点(.)</strong>或<strong>方括号([])</strong>运算符可以获取属性的值。在点运算符之后书写<strong>属性名</strong>，就能够读取相应的属性值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x.a);</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure></p>
 <p>如果属性的值是一个<strong>对象</strong>，可以通过<strong>多次</strong>点运算来读取其属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.b = &#123;y : 3&#125;;</span><br><span class="line">x.b.y</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
 <p>在赋值表达式的左侧书写属性访问表达式的话，就可以将相应的值赋给该属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.a = 1; 				// 这将覆盖已有的属性值</span><br><span class="line">console.log(x.a);</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
 <p>如果赋值给尚不存在的属性名，则<strong>新建属性并对其赋值</strong>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.c = 3;</span><br><span class="line">console.log (x.c);</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2018/03/18/JS之对象/0.png" alt=""></p>
-<p>如果使用方括号运算符，<strong>键名</strong>必须放在<strong>引号</strong>里面，否则会被当作变量处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var foo = &apos;bar&apos;;</span><br><span class="line">var obj = &#123;</span><br><span class="line">  foo: 1,</span><br><span class="line">  bar: 2</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>引用对象obj的foo属性时，如果使用点运算符，foo就是字符串；如果使用方括号运算符，但是不使用引号，那么foo就是一个变量，指向字符串bar。<strong>数值</strong>键名不能使用<strong>点</strong>运算符(会被当成小数点)，只能使用<strong>方括号</strong>运算符。</p>
-<p>点运算符和方括号运算符，不仅可以用来读取值，还可以用来赋值。你可以<strong>随时</strong>新增属性，而不用<strong>定义</strong>对象的时候，就定义好属性。可以把任意类型的值、对象或者函数赋值给对象的属性。</p>
-<p>想要查看一个对象<strong>本身</strong>的<strong>所有</strong>属性，可以使用<code>Object.keys</code>方法。<code>delete</code>命令用于删除对象的属性，删除成功后返回<code>true</code>。删除一个不存在的属性，也会返回<code>true</code>。只有在该属性<strong>存在</strong>且<strong>不能删除</strong>的情况下<code>delete</code>命令才会返回<code>false</code>。<code>delete</code>命令只能删除对象<strong>本身</strong>的属性，无法删除<strong>继承</strong>的属性。</p>
+<p>如果使用方括号运算符，<strong>键名</strong>必须放在<strong>引号</strong>里面，否则会被当作变量处理。<code>object[&#39;key&#39;]</code>与<code>object[key]</code>是不同的，<code>key</code>加了引号是字符串，不加引号则是变量。<strong>数值</strong>键名不能使用<strong>点</strong>运算符(会被当成小数点)，只能使用<strong>方括号</strong>运算符。</p>
+<p>点运算符和方括号运算符，既可以用来读取值，也可以用来赋值。可以<strong>随时</strong>新增对象的属性，而不用在<strong>定义</strong>对象的时候，就定义好属性。可以把任意类型的值、对象或者函数赋值给对象的属性。</p>
+<p>想要查看一个对象<strong>本身</strong>的<strong>所有</strong>属性，可以使用<code>Object.keys</code>方法。</p>
+<p>删除属性<strong>唯一</strong>方法是使用<code>delete</code>，将属性值设置为<code>undefined</code>或<code>null</code>只是移除了与属性相关的值，并没有真正删除属性本身。<code>delete</code>命令用于删除对象的属性，删除成功后返回<code>true</code>，删除一个不存在的属性，也会返回<code>true</code>，只有在该属性<strong>存在</strong>且<strong>不能删除</strong>的情况下<code>delete</code>命令才会返回<code>false</code>。<code>delete</code>命令只能删除对象<strong>本身</strong>的属性，无法删除<strong>继承</strong>的属性。</p>
 <p><code>in</code>运算符用于检查对象是否包含某个属性(检查的是键名，不是键值)如果包含就返回<code>true</code>，否则返回<code>false</code>。但是它分辨不出哪些属性是对象自身的，哪些属性是继承的。就算是继承的属性，它也会返回<code>true</code>。</p>
 <p>参考链接：<a href="http://javascript.ruanyifeng.com/grammar/object.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/grammar/object.html</a></p>
 
@@ -723,7 +723,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#对象是什么"><span class="nav-number">1.</span> <span class="nav-text">对象是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建对象"><span class="nav-number">2.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性的操作"><span class="nav-number">3.</span> <span class="nav-text">属性的操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#对象是什么"><span class="nav-number">1.</span> <span class="nav-text">对象是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建对象"><span class="nav-number">2.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性"><span class="nav-number">3.</span> <span class="nav-text">属性</span></a></li></ol></div>
             
 
           </div>
