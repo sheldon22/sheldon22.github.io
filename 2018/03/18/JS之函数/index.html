@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-19T05:46:59.646Z">
+<meta property="og:updated_time" content="2018-03-19T07:01:01.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之函数">
 <meta name="twitter:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T13:46:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T15:01:01+08:00">
                 2018-03-19
               </time>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,280
+                  4,189
                 </span>
               
 
@@ -489,15 +489,15 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>这里的x，y是待传入参数的名字即形参。而1，2就是实参。实参值会传给函数声明中的形参，此时形参的值==实参的值。函数的形参与实参实际上是一个“=”的赋值关系。函数声明<code>function sum (x, y){…}</code>时带了形参就相当于给函数内部挂了一个<code>var x</code>和<code>var y</code>。</p>
 <p>javascript中数据类型分为<strong>基本</strong>类型与<strong>引用</strong>类型；基本类型值存储于<strong>栈</strong>内存中，传递的就是<strong>当前值</strong>，修改不会影响原有变量的值；引用类型值其实也存于栈内存中，只是它的值是<strong>指向堆内存实际值的一个地址</strong>。</p>
 <p>函数参数传递包含两种方式：<strong>值</strong>传递和<strong>引用</strong>传递。<br>值传递：形参是实参值的一个副本，对形参的改变不会影响实参。<br>引用传递：形参实际上是对实参引用变量的复制，复制过来的是实参的引用地址，导致这实参、形参都指向同一个对象实体。形参改变会同时改变实参的值。</p>
-<p>JavaScript中没有指针，所以在JavaScript中不存在变量指向另一个变量的引用，所有变量引用指向的都是值。函数在执行的过程中，形参对实参做一次复制，是使用值复制还是使用引用复制，则由值的类型决定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    value: 3</span><br><span class="line">&#125;;</span><br><span class="line">function foo(x) &#123;</span><br><span class="line">    x = 5;</span><br><span class="line">    console.log(x); // 5</span><br><span class="line">&#125;</span><br><span class="line">foo(obj);</span><br><span class="line">console.log(obj.value) // 1</span><br></pre></td></tr></table></figure></p>
+<p>JavaScript中没有指针，所以在JavaScript中不存在变量指向另一个变量的引用，所有变量引用指向的都是值。函数在执行的过程中，形参对实参做一次复制，是使用值复制还是使用引用复制，则由值的类型决定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    value: 3</span><br><span class="line">&#125;;</span><br><span class="line">function foo(x) &#123;</span><br><span class="line">    x = 5;</span><br><span class="line">    console.log(x); // 5</span><br><span class="line">&#125;</span><br><span class="line">foo(obj);</span><br><span class="line">console.log(obj.value) // 3</span><br></pre></td></tr></table></figure></p>
 <p>变量<code>obj</code>引用指向值<code>{ value: 3 }</code>，<code>foo</code>执行时，形参对实参做一次复制使得形参x引用也是指向值<code>{ value: 3 }</code>，这里<code>x</code>并不是指向<code>obj</code>；接着执行<code>x = 5</code>，相当于更新了<code>x</code>的引用，使<code>x</code>引用指向常量5，但是并没有改变原来的指向值<code>{ value: 3 }</code>，所以<code>obj</code>的引用指向值是没有变的。如果执行的是<code>x.value = 7</code>，相当于是改变了原来的指向值<code>{ value: 3 }</code>，变成了<code>{ value: 7 }</code>，所以<code>obj</code>的引用指向最后的更新值<code>{ value: 7 }</code>。</p>
 <h4 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h4><p>函数在<strong>定义</strong>时并不会执行，只有<strong>调用</strong>该函数时，它们才会执行。调用的两种形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a. sum()</span><br><span class="line">b. sum call(undefined)</span><br></pre></td></tr></table></figure></p>
-<h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><p>在ECMASscript中的代码有三种类型：<code>global</code>, <code>function</code>和<code>eval</code>。<strong>全局</strong>环境(JS代码运行起来会<strong>首先</strong>进入该环境)，函数环境(当函数被调用执行时，会进入当前函数中执行代码)，<code>eval</code>(不建议使用，可忽略)。</p>
+<h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><p>在ECMASscript中的代码有三种类型：<code>global</code>, <code>function</code>和<code>eval</code>。<strong>全局</strong>环境(JS代码运行会<strong>首先</strong>进入该环境)，函数环境(当函数被调用执行时，会进入当前函数中执行代码)，<code>eval</code>(不建议使用，可忽略)。</p>
 <p>每一种代码的执行都需要依赖自身的上下文。函数的每一次调用，都会进入函数执行中的上下文，并且计算函数中变量等的值。<code>eval</code>函数的每一次执行，也会进入<code>eval</code>执行中的上下文，判断应该从何处获取变量的值。</p>
-<p>一个<code>function</code>可能产生无限的上下文环境，因为一个函数的调用(甚至递归)都产生了一个新的上下文环境。一个执行上下文可以激活另一个上下文，就好比一个函数调用了另一个函数(或者全局的上下文调用了一个全局函数)，然后一层一层调用下去。这种实现方式是栈，我们可以称之为上下文堆栈。</p>
-<p><strong>激活其它上下文</strong>的某个上下文被称为<strong>调用者</strong>(caller)。<strong>被激活</strong>的上下文被称为<strong>被调用者</strong>(callee) 。被调用者同时也有可能是调用者(比如一个在全局上下文中被调用的函数调用某些自身的内部方法)。当一个caller激活了一个callee，那么这个caller就会暂停它自身的执行，然后将控制权交给这个callee. 于是这个callee被放入堆栈，成为<strong>进行</strong>中的上下文[running/active execution context]. 当这个callee的上下文结束之后，会把控制权再次交给它的caller，然后caller会在刚才暂停的地方继续执行。在这个caller结束之后, 会继续触发其他的上下文。一个callee可以用返回<code>return</code>或者抛出异常<code>exception</code>来结束自身的上下文。</p>
-<p>所有的ECMAScript的程序执行都可以看做是一个<strong>执行上下文堆栈</strong>[execution context (EC) stack]。堆栈的<strong>顶部</strong>就是处于<strong>激活</strong>状态的上下文。每一种代码的执行都需要依赖自身的上下文。执行上下文可以理解为函数执行的环境，每一个函数执行时，都会给对应的函数创建这样一个执行环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var size = &apos;large&apos;;</span><br><span class="line"></span><br><span class="line">function changeSize() &#123;</span><br><span class="line">   var otherSize = &apos;small&apos;;</span><br><span class="line">   function exchangeSize() &#123;</span><br><span class="line">     	var tempsize = otherSize;</span><br><span class="line">   &#125;</span><br><span class="line">   exchangeSize();</span><br><span class="line">&#125;</span><br><span class="line">changeSize();</span><br></pre></td></tr></table></figure></p>
-<p>用ECStack来表示执行上下文组的堆栈。<br>a. <strong>首先</strong>是<strong>全局</strong>上下文入栈。全局上下文入栈之后，其中的执行代码开始执行，遇到了<code>changeSize()</code>，激活函数<code>changeSize</code>创建它自己的执行上下文。<br>b. <code>changeSize</code>的执行上下文入栈。<code>changeSize</code>的上下文入栈之后，控制器开始执行其中的可执行代码，遇到<code>exchangeSize()</code>之后又激活了一个执行上下文。<br>c. <code>exchangeSize</code>的执行上下文入栈。在<code>exchangeSize</code>的执行代码中，再没有遇到其他能生成执行上下文的情况，因此这段代码执行完毕后，<code>exchangeSize</code>的上下文从栈中弹出。<code>exchangeSize</code>的执行上下文弹出之后，继续执行changeSize的可执行代码，也没有再遇到其他执行上下文，执行完毕之后弹出。这样，ECStack中就只剩下全局上下文了。<strong>全局</strong>上下文在<strong>浏览器窗口关闭后出栈</strong>。在函数中遇到<code>return</code>就会直接终止当前执行代码的执行，因此会直接将当前上下文弹出栈。</p>
+<p>一个<code>function</code>可能产生无限的上下文环境，因为函数的调用(甚至递归)都会产生一个新的上下文环境。一个执行上下文可以激活另一个上下文，就好比一个函数调用了另一个函数，然后一层一层调用下去。这种实现方式是栈，我们称它为上下文堆栈。</p>
+<p><strong>激活其它上下文</strong>的某个上下文为<strong>调用者</strong>(<code>caller</code>)。<strong>被激活</strong>的上下文为<strong>被调用者</strong>(<code>callee</code>) 。被调用者同时也有可能是调用者。当一个<code>caller</code>激活了一个<code>callee</code>，那么这个<code>caller</code>就会暂停它自身的执行，然后将控制权交给这个<code>callee</code>. 于是这个<code>callee</code>被放入堆栈，成为<strong>进行</strong>中的上下文. 当这个<code>callee</code>的上下文结束之后，会把控制权再次交给它的<code>caller</code>，然后<code>caller</code>会在刚才暂停的地方继续执行。在这个<code>caller</code>结束之后, 会继续触发其他的上下文。一个<code>callee</code>可以用返回<code>return</code>或者抛出异常<code>exception</code>来结束自身的上下文。</p>
+<p>所有的ECMAScript的程序执行都可以看做是一个<strong>执行上下文堆栈</strong>。堆栈的<strong>顶部</strong>就是处于<strong>激活</strong>状态的上下文。每一种代码的执行都需要依赖自身的上下文。可以将执行上下文理解为函数执行的环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var size = &apos;large&apos;;</span><br><span class="line"></span><br><span class="line">function changeSize() &#123;</span><br><span class="line">   var otherSize = &apos;small&apos;;</span><br><span class="line">   function exchangeSize() &#123;</span><br><span class="line">     	var tempsize = otherSize;</span><br><span class="line">   &#125;</span><br><span class="line">   exchangeSize();</span><br><span class="line">&#125;</span><br><span class="line">changeSize();</span><br></pre></td></tr></table></figure></p>
+<p><code>ECStack</code>即执行上下文组的堆栈。<br>a. <strong>首先</strong>是<strong>全局</strong>上下文入栈。全局上下文入栈之后，其中的执行代码开始执行，遇到了<code>changeSize()</code>，激活函数<code>changeSize</code>创建它自己的执行上下文。<br>b. <code>changeSize</code>的执行上下文入栈。<code>changeSize</code>的上下文入栈之后，控制器开始执行其中的可执行代码，遇到<code>exchangeSize()</code>之后又激活了一个执行上下文。<br>c. <code>exchangeSize</code>的执行上下文入栈。在<code>exchangeSize</code>的执行代码中，再没有遇到其他能生成执行上下文的情况，因此这段代码执行完毕后，<code>exchangeSize</code>的上下文从栈中弹出。<code>exchangeSize</code>的执行上下文弹出之后，继续执行changeSize的可执行代码，也没有再遇到其他执行上下文，执行完毕之后弹出。这样，ECStack中就只剩下全局上下文了。<strong>全局</strong>上下文在<strong>浏览器窗口关闭后出栈</strong>。在函数中遇到<code>return</code>就会直接终止当前执行代码的执行，因此会直接将当前上下文弹出栈。</p>
 <p>执行上下文特点是单线程。同步执行，只有<strong>栈顶</strong>的上下文处于<strong>执行</strong>中, 其他上下文需要等待。函数的执行上下文的个数没有限制。每次某个函数被调用，就会有个新的执行上下文为其创建, 即使是调用的自身函数，也是如此。</p>
 <h5 id="变量对象"><a href="#变量对象" class="headerlink" title="变量对象"></a>变量对象</h5><p>一个执行的上下文可以抽象的理解为object。每一个执行的上下文都有一系列的属性(我们称为上下文状态)，他们用来追踪关联代码的执行进度。如果变量与执行上下文相关，那变量自己应该知道它的数据存储在哪里，并且知道如何访问。这种机制称为<strong>变量对象</strong>(variable object)。</p>
 <p>变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容：<br>a. <strong>函数声明</strong>(FunctionDeclaration, 缩写为FD);<br>b. <strong>函数的形参</strong><br>c. <strong>变量(var, 变量声明)</strong>;</p>
@@ -776,7 +776,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.1k</span>
+    <span title="Site words total count">19.0k</span>
   
 </div>
 
