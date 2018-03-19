@@ -101,7 +101,7 @@
 <meta property="og:description" content="对象是什么JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是动态的，可以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://sheldon22.github.io/2018/03/18/JS之对象/0.png">
-<meta property="og:updated_time" content="2018-03-19T05:31:32.961Z">
+<meta property="og:updated_time" content="2018-03-19T06:21:42.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之对象">
 <meta name="twitter:description" content="对象是什么JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是动态的，可以">
@@ -374,7 +374,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T13:31:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T14:21:42+08:00">
                 2018-03-19
               </time>
             
@@ -439,7 +439,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,206
+                  1,203
                 </span>
               
 
@@ -478,10 +478,10 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
         <h4 id="对象是什么"><a href="#对象是什么" class="headerlink" title="对象是什么"></a>对象是什么</h4><p>JavaScript是一种面向对象(object-oriented)的语言。对象是什么呢？对象就是某种东西。对于JavaScript，它处理的对象都在Web浏览器中，比如窗口、表单，以及如按钮和复选框的表单元素。对象是一种复合值：它将很多值(原始值或者其他对象)聚合在一起，可通过名字访问这些值。对象也可看做是属性的无序集合，每个属性都是一个名/值对。JavaScript对象是<strong>动态</strong>的，可以新增属性也可以删除属性。对象也是<strong>可变</strong>的，我们通过<strong>引用</strong>而非值来操作对象。</p>
 <p>如果不同的变量名指向同一个对象，那么它们都是这个对象的引用，也就是说指向同一个<strong>内存地址</strong>。修改其中一个变量，会影响到其他的变量。如果取消某一个变量对于原对象的引用，不会影响到另一个变量。这种引用只局限于<strong>对象</strong>，如果两个变量指向同一个原始类型的值，这时的变量是值的拷贝。</p>
-<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><p>可以通过对象直接量、关键字new和Object.create()函数来创建对象。<br>对象字面量表达式的语法: 以<code>{</code>开头，以<code>}</code>结尾，<code>{ 属性名: 属性值, 属性名: 属性值, …… }</code>。<br><code>var x = {a: &#39;Hello World&#39;}</code><br>这个对象内部包含一个键值对(又称为”成员”)，<code>a</code>是<strong>“键名”</strong>(成员的名称)，字符串<code>Hello World</code>是<strong>“键值”</strong>(成员的值)。键名与键值之间用<strong>冒号</strong>分隔。如果对象内部包含多个键值对，每个键值对之间用<strong>逗号</strong>分隔。</p>
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><p>可以通过对象直接量、关键字new和Object.create()函数来创建对象。<br>对象字面量表达式以<code>{</code>开头，以<code>}</code>结尾，语法: <code>{ 属性名: 属性值, 属性名: 属性值, …… }</code>。<br><code>var x = {a: &#39;Hi&#39;}</code><br>这个对象内部包含一个键值对(又称为”成员”)，<code>a</code>是<strong>“键名”</strong>(成员的名称)，字符串<code>Hello World</code>是<strong>“键值”</strong>(成员的值)。键名与键值之间用<strong>冒号</strong>分隔。如果对象内部包含多个键值对，每个键值对之间用<strong>逗号</strong>分隔。</p>
 <p>对象的所有键名都是字符串，所以加不加引号都可以。如果<strong>键名不符合标识名的条件</strong>(比如第一个字符为数字，或者含有空格或运算符)，就<strong>必须加上引号</strong>，否则会报错。属性可以<strong>动态</strong>创建，不必在对象声明时就指定。</p>
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>属性包括名字和值。属性名可以是包含空字符串在内的任意字符串，但对象中不能存在两个<strong>同名</strong>的属性。属性值可以被指定为任意类型的值，包括数组或其他的对象，属性值甚至还可以是一个函数。如果一个<strong>属性</strong>的值为<strong>函数</strong>，通常把这个属性称为<strong>“方法”</strong>，它可以像函数那样调用。</p>
-<p>通过<strong>点(.)</strong>或<strong>方括号([])</strong>运算符可以获取属性的值。在点运算符之后书写<strong>属性名</strong>，就能够读取相应的属性值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x.a);</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure></p>
+<p>通过<strong>点(.)</strong>或<strong>方括号([])</strong>运算符可以获取属性的值。在点运算符之后书写<strong>属性名</strong>，就能够读取相应的属性值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x.a);</span><br><span class="line">Hi</span><br></pre></td></tr></table></figure></p>
 <p>如果属性的值是一个<strong>对象</strong>，可以通过<strong>多次</strong>点运算来读取其属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.b = &#123;y : 3&#125;;</span><br><span class="line">x.b.y</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
 <p>在赋值表达式的左侧书写属性访问表达式的话，就可以将相应的值赋给该属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.a = 1; 				// 这将覆盖已有的属性值</span><br><span class="line">console.log(x.a);</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
 <p>如果赋值给尚不存在的属性名，则<strong>新建属性并对其赋值</strong>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.c = 3;</span><br><span class="line">console.log (x.c);</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
