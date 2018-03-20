@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-19T07:41:18.147Z">
+<meta property="og:updated_time" content="2018-03-20T07:39:58.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之函数">
 <meta name="twitter:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
@@ -372,8 +372,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-19T15:41:18+08:00">
-                2018-03-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T15:39:58+08:00">
+                2018-03-20
               </time>
             
           </span>
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,082
+                  4,048
                 </span>
               
 
@@ -485,8 +485,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>上面的函数f有两个参数，且参数名都是x。取值的时候，以后面的x为准。即使后面的x没有值或被省略，也是以其为准。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f(x, x)&#123;</span><br><span class="line">  console.log(x);&#125;</span><br><span class="line"></span><br><span class="line">f(1) 		// undefined</span><br></pre></td></tr></table></figure></p>
 <p>调用函数f的时候，没有提供第二个参数，x的取值就变成了undefined。这时，如果要获得第一个x的值，可以使用arguments对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f(x, x) &#123;</span><br><span class="line">  console.log(arguments[0]);&#125;</span><br><span class="line"></span><br><span class="line">f(1)		 	// 1</span><br></pre></td></tr></table></figure></p>
 <p><code>arguments</code>对象包含了函数运行时的所有参数，<code>arguments[0]</code>就是第一个参数，<code>arguments[1]</code>就是第二个参数，以此类推。这个对象只有在<strong>函数体内部</strong>，才可以使用。在<strong>正常</strong>模式下，<code>arguments</code>对象可以在运行时修改。但在严格模式下, <code>arguments</code>对象是一个只读对象, 修改它是无效的, 但不会报错。虽然<code>arguments</code>很像数组，但它是一个对象。数组专有的方法(比如<code>slice</code>和<code>forEach</code>), 不能在<code>arguments</code>对象上直接使用。</p>
-<h5 id="形参与实参"><a href="#形参与实参" class="headerlink" title="形参与实参"></a>形参与实参</h5><p><strong>形参</strong>是在<strong>定义</strong>函数时使用的参数，它只是代表参数的形式而并非真正传入的参数。目的是用来<strong>接收调用该函数</strong>时传进来的<strong>实际参数</strong>。<br><strong>实参</strong>是在<strong>调用时传递</strong>给<strong>函数</strong>的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function sum (x, y) &#123;</span><br><span class="line">	return Number(x) + Number(y);</span><br><span class="line">&#125;</span><br><span class="line">sum (1, 2);</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
-<p>这里的x，y是待传入参数的名字即形参。而1，2就是实参。实参值会传给函数声明中的形参，此时形参的值==实参的值。函数的形参与实参实际上是一个“=”的赋值关系。函数声明<code>function sum (x, y){…}</code>时带了形参就相当于给函数内部挂了一个<code>var x</code>和<code>var y</code>。</p>
+<h5 id="形参与实参"><a href="#形参与实参" class="headerlink" title="形参与实参"></a>形参与实参</h5><p><strong>形参</strong>是在<strong>定义</strong>函数时使用的参数，它只是代表参数的形式而并非真正传入的参数。目的是用来<strong>接收调用该函数</strong>时传进来的<strong>实际参数</strong>。<br><strong>实参</strong>是在<strong>调用时传递</strong>给<strong>函数</strong>的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function car(x)&#123;</span><br><span class="line">	// var x = arguments[0];</span><br><span class="line">    console.log(x);</span><br><span class="line">&#125;</span><br><span class="line">car(BMW);</span><br></pre></td></tr></table></figure></p>
+<p>这里的x是待传入参数的名字即形参。而BMW是实参。实参值会传给函数声明中的形参，此时形参的值==实参的值。函数的形参与实参实际上是一个“=”的赋值关系。</p>
 <p>javascript中数据类型分为<strong>基本</strong>类型与<strong>引用</strong>类型；基本类型值存储于<strong>栈</strong>内存中，传递的就是<strong>当前值</strong>，修改不会影响原有变量的值；引用类型值其实也存于栈内存中，只是它的值是<strong>指向堆内存实际值的一个地址</strong>。</p>
 <p>函数参数传递包含两种方式：<strong>值</strong>传递和<strong>引用</strong>传递。<br>值传递：形参是实参值的一个副本，对形参的改变不会影响实参。<br>引用传递：形参实际上是对实参引用变量的复制，复制过来的是实参的引用地址，导致这实参、形参都指向同一个对象实体。形参改变会同时改变实参的值。</p>
 <p>JavaScript中没有指针，所以在JavaScript中不存在变量指向另一个变量的引用，所有变量引用指向的都是值。函数在执行的过程中，形参对实参做一次复制，是使用值复制还是使用引用复制，则由值的类型决定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    value: 3</span><br><span class="line">&#125;;</span><br><span class="line">function foo(x) &#123;</span><br><span class="line">    x = 5;</span><br><span class="line">    console.log(x); // 5</span><br><span class="line">&#125;</span><br><span class="line">foo(obj);</span><br><span class="line">console.log(obj.value) // 3</span><br></pre></td></tr></table></figure></p>
@@ -563,6 +563,10 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/20/条件判断/" rel="prev" title="条件判断">
+                条件判断 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -646,7 +650,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -779,7 +783,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.9k</span>
+    <span title="Site words total count">19.0k</span>
   
 </div>
 
