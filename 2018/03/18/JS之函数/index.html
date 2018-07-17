@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-20T07:39:58.333Z">
+<meta property="og:updated_time" content="2018-03-22T03:05:03.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之函数">
 <meta name="twitter:description" content="函数是一段JavaScript代码，它只定义一次，但可能被执行或调用任意次。 函数声明函数声明语句可以通过函数声明语句来定义一个函数。函数声明语句以关键字function开始，其后跟有函数名、参数列表和函数体。函数声明语句的语法：function 函数名 (参数, 参数, ……) {函数体} 函数表达式除了用function命令声明函数，还可以采用变量赋值的写法。123var foo = func">
@@ -372,8 +372,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T15:39:58+08:00">
-                2018-03-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-22T11:05:03+08:00">
+                2018-03-22
               </time>
             
           </span>
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,048
+                  4,065
                 </span>
               
 
@@ -499,7 +499,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>我们来看下这个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var size = &apos;large&apos;;</span><br><span class="line"></span><br><span class="line">function changeSize() &#123;</span><br><span class="line">   var otherSize = &apos;small&apos;;</span><br><span class="line">   function exchangeSize() &#123;</span><br><span class="line">     	var tempsize = otherSize;</span><br><span class="line">   &#125;</span><br><span class="line">   exchangeSize();</span><br><span class="line">&#125;</span><br><span class="line">changeSize();</span><br></pre></td></tr></table></figure></p>
 <p>a. <strong>首先</strong>是<strong>全局</strong>上下文入栈。全局上下文入栈之后，其中的执行代码开始执行，遇到了<code>changeSize()</code>，激活函数<code>changeSize</code>创建它自己的执行上下文。<br>b. <code>changeSize</code>的执行上下文入栈。<code>changeSize</code>的上下文入栈之后，控制器开始执行其中的可执行代码，遇到<code>exchangeSize()</code>之后又激活了一个执行上下文。<br>c. <code>exchangeSize</code>的执行上下文入栈。在<code>exchangeSize</code>的执行代码中，再没有遇到其他能生成执行上下文的情况，因此这段代码执行完毕后，<code>exchangeSize</code>的上下文从栈中弹出。<code>exchangeSize</code>的执行上下文弹出之后，继续执行<code>changeSize</code>的可执行代码，也没有再遇到其他执行上下文，执行完毕之后弹出。这样，ECStack中就只剩下全局上下文了。<strong>全局</strong>上下文在<strong>浏览器窗口关闭后出栈</strong>。在函数中遇到<code>return</code>就会直接终止当前执行代码的执行，因此会直接将当前上下文弹出栈。</p>
 <p><strong>激活其它上下文</strong>的某个上下文为<strong>调用者</strong>(<code>caller</code>)。<strong>被激活</strong>的上下文为<strong>被调用者</strong>(<code>callee</code>) 。被调用者同时也有可能是调用者。当一个<code>caller</code>激活了一个<code>callee</code>，那么这个<code>caller</code>就会暂停它自身的执行，然后将控制权交给这个<code>callee</code>。于是这个<code>callee</code>被放入堆栈，成为<strong>进行</strong>中的上下文。当这个<code>callee</code>的上下文结束之后，会把控制权交还给它的<code>caller</code>，然后<code>caller</code>会在刚才暂停的地方继续执行。在这个<code>caller</code>结束之后，会继续触发其他的上下文。一个<code>callee</code>可以用返回<code>return</code>或者抛出异常<code>exception</code>来结束自身的上下文。</p>
-<p>执行上下文特点是单线程。同步执行，只有<strong>栈顶</strong>的上下文处于<strong>执行</strong>中, 其他上下文需要等待。函数的执行上下文的个数没有限制。每次某个函数被调用，就会有个新的执行上下文为其创建，即使是调用的自身函数，也是如此。</p>
+<p>执行上下文特点：<strong>单线程</strong>(即程序至始至终只能进入<strong>一个</strong>执行上下文)。同步执行，只有<strong>栈顶</strong>的上下文处于<strong>执行</strong>中, 其他上下文需要等待。函数的执行上下文的个数没有限制。每次某个函数被调用，就会有个新的执行上下文为其创建，即使是调用的自身函数，也是如此。</p>
 <h5 id="变量对象"><a href="#变量对象" class="headerlink" title="变量对象"></a>变量对象</h5><p>一个执行的上下文可以抽象的理解为object。每一个执行的上下文都有一系列的属性(我们称为上下文状态)，他们用来追踪关联代码的执行进度。如果变量与执行上下文相关，那变量自己应该知道它的数据存储在哪里，并且知道如何访问。这种机制称为<strong>变量对象</strong>(variable object)。</p>
 <p>变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容：<br>a. <strong>函数声明</strong>(FunctionDeclaration, 缩写为FD);<br>b. <strong>函数的形参</strong><br>c. <strong>变量(var, 变量声明)</strong>;</p>
 <h6 id="全局上下文中的变量对象"><a href="#全局上下文中的变量对象" class="headerlink" title="全局上下文中的变量对象"></a>全局上下文中的变量对象</h6><p>全局对象(Global object)是在进入任何执行上下文之前就已经创建了的对象，这个对象是唯一的，它的属性在程序中任何地方都可以访问，全局对象的生命周期终止于程序退出那一刻。</p>
@@ -563,10 +563,6 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/20/条件判断/" rel="prev" title="条件判断">
-                条件判断 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -650,7 +646,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -783,7 +779,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.0k</span>
+    <span title="Site words total count">18.3k</span>
   
 </div>
 
