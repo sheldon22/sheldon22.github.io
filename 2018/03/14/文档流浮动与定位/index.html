@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-17T07:37:16.251Z">
+<meta property="og:updated_time" content="2018-07-30T06:45:30.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文档流、浮动与定位">
 <meta name="twitter:description" content="文档流文档流指的是浏览器在页面放置HTML元素所用的的方法。 块元素从上向下流，各个块元素之间会有一个默认的换行，每个块元素会占据页面的整个宽度。块级元素的宽度默认是自适应它的父元素的。块级元素的高度是由它内部文档流中元素的高度总和决定的。如果块级元素里面只有一个内联元素，那个块级元素的高度就是由这个内联元素的行高决定的。如果有多个内联元素，就是它们的行高相加。 内联元素在块元素内部从左上方流向右">
@@ -372,8 +372,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T15:37:16+08:00">
-                2018-03-17
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-30T14:45:30+08:00">
+                2018-07-30
               </time>
             
           </span>
@@ -481,7 +481,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <h4 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h4><p><code>float</code>被设计出来的初衷是用于文字环绕效果, 即对一个图片使用<code>float</code>之后，它周围的文字会环绕着它。后来发现使用<code>float</code>+<code>div</code>是一种不错的排版方法。所以现在绝大多数情况下使用<code>float</code>就是为了横向排版或者多列布局了。</p>
 <p>由于<code>float</code>会使元素脱离文档流，所以当一个元素里只包含一个浮动元素时，这个浮动元素会破坏父元素的原本结构，使得父元素的高度发生坍塌。<strong>块级</strong>元素设置了<code>float</code>之后，如果不手动设置宽度，其<strong>宽度</strong>会根据<strong>内容自动调整</strong>。使用了<code>float</code>的元素会自动变为块元素。</p>
 <p>使用浮动会带来一定的副作用，如父元素高度坍塌等，所以我们需要清除浮动。清除浮动的步骤是给包含浮动元素的<strong>容器</strong>设置<code>clearfix</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after &#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>.clearfix:after:</code> 使用<code>after</code>伪类给所有包含<code>.clearfix</code>类的元素里面创建一个虚拟子元素，该子元素为父元素的最后一个子元素。<br><code>content</code>: ‘’是指这个伪元素的内容为空，content属性需要空引用作为它的值。<br><code>clear：both</code>清除伪元素两边的浮动元素。<br><code>display: block</code> 默认的伪元素是<strong>行内</strong>元素，但是下面的clear属性只对块元素起作用，所以用display将这个伪元素改为块元素。<br><code>*zoom: 1</code> ie8以下是不支持伪元素：after的，ie通常是触发hasLayout来清除浮动了，常见的就是zoom:1，<code>*</code>号是是IE8的一个bug，IE8看到以<code>*</code>开头的代码，会忽略星号，执行后面的代码。</p>
+<p><code>.clearfix::after</code>: 使用<code>after</code>伪类给所有包含<code>.clearfix</code>类的元素里面创建一个虚拟子元素，该子元素为父元素的最后一个子元素。<br><code>content:&#39;&#39;</code>是指这个伪元素的内容为空，content属性需要空引用作为它的值。<br><code>clear：both</code>清除伪元素两边的浮动元素。<br><code>display: block</code> 默认的伪元素是<strong>行内</strong>元素，但是下面的clear属性只对块元素起作用，所以用display将这个伪元素改为块元素。<br><code>*zoom: 1</code> ie8以下是不支持伪元素：after的，ie通常是触发hasLayout来清除浮动了，常见的就是zoom:1，<code>*</code>号是是IE8的一个bug，IE8看到以<code>*</code>开头的代码，会忽略星号，执行后面的代码。</p>
 <p>使用情景：</p>
 <ol>
 <li>两栏布局<a href="http://summerlee.club/Task/%E4%B8%A4%E6%A0%8F" target="_blank" rel="noopener">传送门</a></li>
