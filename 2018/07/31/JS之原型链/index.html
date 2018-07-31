@@ -92,20 +92,20 @@
 
 
 
-<meta name="description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
+<meta name="description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
 <meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS之原型链">
+<meta property="og:title" content="JS进阶">
 <meta property="og:url" content="https://sheldon22.github.io/2018/07/31/JS之原型链/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
+<meta property="og:description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/1.png">
-<meta property="og:updated_time" content="2018-07-31T07:10:25.142Z">
+<meta property="og:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/JS进阶/1.png">
+<meta property="og:updated_time" content="2018-07-31T08:27:56.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS之原型链">
-<meta name="twitter:description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
-<meta name="twitter:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/1.png">
+<meta name="twitter:title" content="JS进阶">
+<meta name="twitter:description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
+<meta name="twitter:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/JS进阶/1.png">
 
 
 
@@ -141,7 +141,7 @@
 
 
 
-  <title>JS之原型链 | 凌云阁</title>
+  <title>JS进阶 | 凌云阁</title>
   
 
 
@@ -346,7 +346,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
         
         
-          <h1 class="post-title" itemprop="name headline">JS之原型链</h1>
+          <h1 class="post-title" itemprop="name headline">JS进阶</h1>
         
 
         <div class="post-meta">
@@ -374,7 +374,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-31T15:10:25+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-31T16:27:56+08:00">
                 2018-07-31
               </time>
             
@@ -439,7 +439,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  527
+                  724
                 </span>
               
 
@@ -455,7 +455,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -476,12 +476,12 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
 
       
-        <p>从一个问题谈起…</p>
-<p><img src="/2018/07/31/JS之原型链/1.png" alt=""></p>
-<p>我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的<code>__proto__</code>是什么？<code>__proto__</code>是对<code>prototype</code>的引用。<code>prototype</code>又是什么呢？<code>prototype</code>是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到<code>prototype</code>里， 然后让每个对象的<code>__proto__</code>存储这个原型的地址。所有对象都有<code>__proto__</code>，而所有构造函数都有<code>prototype</code>。对象<code>__proto__</code>===构造函数<code>prototype</code>。数组也是对象的一种，所以自然拥有<code>__proto__</code>。</p>
+        <h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>从一个问题谈起…<br><img src="/2018/07/31/JS之原型链/JS进阶/1.png" alt=""><br>我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的<code>__proto__</code>是什么？<code>__proto__</code>是对<code>prototype</code>的引用。<code>prototype</code>又是什么呢？<code>prototype</code>是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到<code>prototype</code>里， 然后让每个对象的<code>__proto__</code>存储这个原型的地址。所有对象都有<code>__proto__</code>，而所有构造函数都有<code>prototype</code>。对象<code>__proto__</code>===构造函数<code>prototype</code>。数组也是对象的一种，所以自然拥有<code>__proto__</code>。</p>
 <p>基础类型(number，string，boolean)用了<code>new</code>操作符以后，就成了对象(包装对象)。<code>number</code>、<code>string</code>都有自己的属性，存在自身的原型，然后所有对象都共有的属性则存在<code>object</code>原型里。但是我们发现<code>var a = 1</code>，<code>a.toString</code>也是可以的，这是为什么呢？这是源于一个巧妙的设计。当你使用<code>a.toString</code>的时候，实际上经过了一个临时转换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">temp = new Number(a)</span><br><span class="line">temp.toString</span><br><span class="line">得到值后temp就自动消失</span><br></pre></td></tr></table></figure></p>
 <p>读取对象的某个属性时，JS引擎会先寻找对象本身的属性，找不到的话，就到它的原型去找，如果还是找不到，就到原型的原型去找。直到找到一个名字匹配的属性或到达原型链的末尾。如果直到最顶层的<code>Object.prototype</code>还是找不到，则返回<code>undefined</code>。<code>Object.prototype</code>的原型是<code>null</code>。<code>null</code>没有任何属性和方法，也没有自己的原型。所以原型链的尽头就是<code>null</code>。如果对象自身和它的原型，都定义了一个同名属性，那么优先读取对象自身的属性，这叫做覆盖。</p>
 <p>原型链的形成是靠<code>__proto__</code>而非<code>prototype</code>，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找。一个对象的<code>__proto__</code>记录着自己的原型链，决定了自身的数据类型，改变 <code>__proto__</code>就等于改变对象的数据类型。</p>
+<h5 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h5><p>如果一个函数，使用了它范围外的变量，那么(这个函数+这个变量)就叫做闭包。闭包的用处：一是可以读取函数内部的变量。二是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。三是可以封装对象的私有属性和私有方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function outer()&#123;</span><br><span class="line">    var a = 0</span><br><span class="line">    function inner()&#123;</span><br><span class="line">        a = a + 1</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    return inner</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var b = outer()</span><br><span class="line">b()</span><br></pre></td></tr></table></figure></p>
+<p>闭包经常配合着立即执行函数来使用。立即执行函数<code>(function(){ .. })()</code>就是声明一个匿名函数, 马上调用这个匿名函数。第一个()将函数变成表达式，第二个()执行了这个函数。</p>
 
       
     </div>
@@ -575,8 +575,17 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -685,6 +694,22 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#原型链"><span class="nav-number">1.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包"><span class="nav-number">2.</span> <span class="nav-text">闭包</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -712,7 +737,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">19.5k</span>
   
 </div>
 
