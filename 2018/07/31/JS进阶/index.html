@@ -92,18 +92,20 @@
 
 
 
-<meta name="description" content="变量概述变量是用于保存值的占位符。定义变量时要使用var操作符(var是一个关键字)，后跟变量名(即一个标识符)。var message这行代码定义了一个名为message的变量，该变量可以用来保存任何值(像这样未经过初始化的变量，会保存一个特殊的值undefined。ECMAScript也支持直接初始化变量，初始化的过程就是给变量赋值。 我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作">
+<meta name="description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
 <meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS之变量">
-<meta property="og:url" content="https://sheldon22.github.io/2018/03/17/JS之变量/index.html">
+<meta property="og:title" content="JS进阶">
+<meta property="og:url" content="https://sheldon22.github.io/2018/07/31/JS进阶/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="变量概述变量是用于保存值的占位符。定义变量时要使用var操作符(var是一个关键字)，后跟变量名(即一个标识符)。var message这行代码定义了一个名为message的变量，该变量可以用来保存任何值(像这样未经过初始化的变量，会保存一个特殊的值undefined。ECMAScript也支持直接初始化变量，初始化的过程就是给变量赋值。 我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作">
+<meta property="og:description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-17T08:50:04.205Z">
+<meta property="og:image" content="https://sheldon22.github.io/2018/07/31/JS进阶/1.png">
+<meta property="og:updated_time" content="2018-07-31T12:00:57.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS之变量">
-<meta name="twitter:description" content="变量概述变量是用于保存值的占位符。定义变量时要使用var操作符(var是一个关键字)，后跟变量名(即一个标识符)。var message这行代码定义了一个名为message的变量，该变量可以用来保存任何值(像这样未经过初始化的变量，会保存一个特殊的值undefined。ECMAScript也支持直接初始化变量，初始化的过程就是给变量赋值。 我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作">
+<meta name="twitter:title" content="JS进阶">
+<meta name="twitter:description" content="原型链从一个问题谈起…我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数">
+<meta name="twitter:image" content="https://sheldon22.github.io/2018/07/31/JS进阶/1.png">
 
 
 
@@ -133,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://sheldon22.github.io/2018/03/17/JS之变量/"/>
+  <link rel="canonical" href="https://sheldon22.github.io/2018/07/31/JS进阶/"/>
 
 
 
 
 
-  <title>JS之变量 | 凌云阁</title>
+  <title>JS进阶 | 凌云阁</title>
   
 
 
@@ -327,7 +329,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/03/17/JS之变量/">
+    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/07/31/JS进阶/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Summer">
@@ -344,7 +346,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
         
         
-          <h1 class="post-title" itemprop="name headline">JS之变量</h1>
+          <h1 class="post-title" itemprop="name headline">JS进阶</h1>
         
 
         <div class="post-meta">
@@ -356,8 +358,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T16:21:52+08:00">
-                2018-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T20:00:37+08:00">
+                2018-07-31
               </time>
             
 
@@ -372,8 +374,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T16:50:04+08:00">
-                2018-03-17
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-31T20:00:57+08:00">
+                2018-07-31
               </time>
             
           </span>
@@ -409,8 +411,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/17/JS之变量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/17/JS之变量/" itemprop="commentCount"></span>
+                <a href="/2018/07/31/JS进阶/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/31/JS进阶/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -437,7 +439,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,421
+                  724
                 </span>
               
 
@@ -453,7 +455,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -474,28 +476,12 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
       
 
       
-        <h4 id="变量概述"><a href="#变量概述" class="headerlink" title="变量概述"></a>变量概述</h4><p>变量是用于保存值的占位符。定义变量时要使用<code>var</code>操作符(<code>var</code>是一个关键字)，后跟变量名(即一个标识符)。<br><code>var message</code><br>这行代码定义了一个名为<code>message</code>的变量，该变量可以用来保存<strong>任何值</strong>(像这样未经过初始化的变量，会保存一个特殊的值<code>undefined</code>。ECMAScript也支持直接<strong>初始化</strong>变量，初始化的过程就是给<strong>变量赋值</strong>。</p>
-<p>我们在对变量进行赋值时会执行两个动作，首先编译器会在当前作用域中<strong>声明</strong>一个变量(如果之前没有声明过)，然后在运行时引擎会在<strong>作用域</strong>中<strong>查找</strong>该变量，如果能够找到就会对它<strong>赋值</strong>。<strong>＝操作符</strong>或<strong>调用函数时传入参数</strong>的操作都会导致关联作用域的赋值操作。</p>
-<p>变量的名字必须是独特且具有意义的。<strong>变量</strong>、<strong>函数</strong>名称通常使用<strong>小写驼峰</strong>造型，也就是<strong>第一个词小写</strong>，<strong>后面的词混合大小写</strong>。而<strong>驼峰型</strong>(首字母也大写)只作用于<strong>对象</strong>。</p>
-<h4 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h4><p>变量只有使用<code>var</code>关键字才能声明。变量的声明和赋值，是<strong>分开</strong>的两个步骤。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br><span class="line">a = 10;</span><br></pre></td></tr></table></figure></p>
-<p>如果只是声明了一个变量而没有对它进行赋值，那该变量的值是<strong>undefined</strong>。undefined是一个JS关键字，表示”无定义”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var b</span><br><span class="line">console.log(b)</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure></p>
-<p>如果一个变量没有声明就直接使用，JavaScript会报错，告诉你变量未定义。<br><code>x  // Reference Error: x is not defined</code></p>
-<p>在函数<strong>外部</strong>的变量使用了<code>var</code>声明，那就是<strong>全局</strong>变量。而在函数<strong>内部</strong>的变量只有使用<code>var</code>声明的变量才是<strong>局部</strong>变量。</p>
-<h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>JavaScript引擎的工作方式是：先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的<strong>声明</strong>语句，都会被提升到代码的<strong>头部</strong>，可以将这个过程形象地想象成所有的声明(变量和函数)都会被”移动”到各自作用域的最顶端，这个过程被称为提升。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x);</span><br><span class="line">var x = 5;</span><br></pre></td></tr></table></figure></p>
-<p>上面代码使用console.log方法，在控制台(console)显示变量x的值。这时变量x还没有声明和赋值，应该会导致报错，但实际运行后并不会报错。是因为存在着变量提升，真正运行的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x;</span><br><span class="line">console.log(x);</span><br><span class="line">x = 5;</span><br></pre></td></tr></table></figure></p>
-<p>结果是显示undefined，表示变量x已声明，但还未赋值。变量提升只对<strong>var</strong>命令声明的变量有效，如果一个变量不是用var命令声明的，就不会发生变量提升。</p>
-<p>函数声明和变量声明都会被提升。但<strong>函数</strong>会先被提升，然后才是变量。尽管重复的用var声明一个变量会被忽略掉，但出现在后面的函数声明还是可以覆盖前面的函数声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;test&quot;;</span><br><span class="line">function a()&#123;</span><br><span class="line">	console.log(x);  //输出&quot;undefined&quot;，而不是&quot;test或testing&quot;</span><br><span class="line">	var x = &quot;testing&quot;;  //变量在这里赋初始值，但变量本身在函数体内任何地方均是有定义的</span><br><span class="line">	console.log(x); //输出&quot;testing&quot;</span><br><span class="line">&#125;</span><br><span class="line">a.call()</span><br></pre></td></tr></table></figure></p>
-<p>你可能会以为函数中的第一行会输出”test”，因为代码还没有执行到var语句声明局部变量的地方。其实不然，由于函数作用域的特性，<strong>局部</strong>变量在整个函数体内始终是有定义的，也就是说，在<strong>函数体</strong>内的<strong>局部</strong>变量<strong>遮盖</strong>了<strong>同名全局</strong>变量。所以只有在程序执行到var语句的时候，局部变量才会被真正赋值。因此，上述过程等价于：将函数内的变量声明”提前”至函数体顶部，同时变量初始化留在原来的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">	var x;	//在函数顶部声明了局部变量</span><br><span class="line">	console.log(x);	//变量存在，但其值是&quot;undefined&quot;</span><br><span class="line">	x=&quot;testing &quot;;	//这里将其初始化并赋值</span><br><span class="line">	console.log(x);  //这里它具有了我们所期望的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="变量与引用"><a href="#变量与引用" class="headerlink" title="变量与引用"></a>变量与引用</h4><p>变量分为<strong>基本</strong>类型的变量(值型变量)与<strong>引用</strong>类型的变量。对象的赋值其实是将对象的引用进行赋值。</p>
-<p>JS引擎将内存分为代码区和数据区。数据区分为<strong>Stack</strong>(栈内存)和<strong>Heap</strong>(堆内存)。<strong>简单</strong>类型的数据存在<strong>Stack</strong>里。<strong>复杂</strong>类型的数据是把<strong>Heap</strong>地址存在<strong>Stack</strong>里。</p>
-<p>将<strong>基本</strong>类型的值赋值给变量的话，变量将把这个值本身保存起来。如果在右侧写上一个变量，这一变量的值将被赋值给赋值目标处(左侧)的变量。</p>
-<p>将<strong>对象</strong>赋值给变量，其实是把这个对象的<strong>引用</strong>赋值给了该变量。对象本身是无法赋值给一个变量的。如果改变了变量x所引用的对象，那么这一改变也会体现在变量y之中，这是因为这两个变量通过引用而指向了同一个对象。对于引用类型的变量，整个过程中发生改变的其实是其引用的对象，而不是该变量的值。引用类型的变量具有的值就是引用(值)，这个值将在赋值的时候被复制。</p>
-<p>参考文献：</p>
-<ol>
-<li>JavaScript高级程序设计</li>
-<li><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/</a></li>
-<li>你不知道的JS</li>
-</ol>
+        <h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>从一个问题谈起…<br><img src="/2018/07/31/JS进阶/1.png" alt=""><br>我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的<code>__proto__</code>是什么？<code>__proto__</code>是对<code>prototype</code>的引用。<code>prototype</code>又是什么呢？<code>prototype</code>是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到<code>prototype</code>里， 然后让每个对象的<code>__proto__</code>存储这个原型的地址。所有对象都有<code>__proto__</code>，而所有构造函数都有<code>prototype</code>。对象<code>__proto__</code>===构造函数<code>prototype</code>。数组也是对象的一种，所以自然拥有<code>__proto__</code>。</p>
+<p>基础类型(number，string，boolean)用了<code>new</code>操作符以后，就成了对象(包装对象)。<code>number</code>、<code>string</code>都有自己的属性，存在自身的原型，然后所有对象都共有的属性则存在<code>object</code>原型里。但是我们发现<code>var a = 1</code>，<code>a.toString</code>也是可以的，这是为什么呢？这是源于一个巧妙的设计。当你使用<code>a.toString</code>的时候，实际上经过了一个临时转换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">temp = new Number(a)</span><br><span class="line">temp.toString</span><br><span class="line">得到值后temp就自动消失</span><br></pre></td></tr></table></figure></p>
+<p>读取对象的某个属性时，JS引擎会先寻找对象本身的属性，找不到的话，就到它的原型去找，如果还是找不到，就到原型的原型去找。直到找到一个名字匹配的属性或到达原型链的末尾。如果直到最顶层的<code>Object.prototype</code>还是找不到，则返回<code>undefined</code>。<code>Object.prototype</code>的原型是<code>null</code>。<code>null</code>没有任何属性和方法，也没有自己的原型。所以原型链的尽头就是<code>null</code>。如果对象自身和它的原型，都定义了一个同名属性，那么优先读取对象自身的属性，这叫做覆盖。</p>
+<p>原型链的形成是靠<code>__proto__</code>而非<code>prototype</code>，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找。一个对象的<code>__proto__</code>记录着自己的原型链，决定了自身的数据类型，改变 <code>__proto__</code>就等于改变对象的数据类型。</p>
+<h5 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h5><p>如果一个函数，使用了它范围外的变量，那么(这个函数+这个变量)就叫做闭包。闭包的用处：一是可以读取函数内部的变量。二是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。三是可以封装对象的私有属性和私有方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function outer()&#123;</span><br><span class="line">    var a = 0</span><br><span class="line">    function inner()&#123;</span><br><span class="line">        a = a + 1</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    return inner</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var b = outer()</span><br><span class="line">b()</span><br></pre></td></tr></table></figure></p>
+<p>闭包经常配合着立即执行函数来使用。立即执行函数<code>(function(){ .. })()</code>就是声明一个匿名函数, 马上调用这个匿名函数。第一个()将函数变成表达式，第二个()执行了这个函数。</p>
 
       
     </div>
@@ -526,8 +512,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/17/JS基础/" rel="next" title="JS基础">
-                <i class="fa fa-chevron-left"></i> JS基础
+              <a href="/2018/07/31/JS之原型链/" rel="next" title="JS进阶">
+                <i class="fa fa-chevron-left"></i> JS进阶
               </a>
             
           </div>
@@ -535,10 +521,6 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/18/JS之对象/" rel="prev" title="JS之对象">
-                JS之对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -721,7 +703,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量概述"><span class="nav-number">1.</span> <span class="nav-text">变量概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量声明"><span class="nav-number">2.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量提升"><span class="nav-number">3.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量与引用"><span class="nav-number">4.</span> <span class="nav-text">变量与引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#原型链"><span class="nav-number">1.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包"><span class="nav-number">2.</span> <span class="nav-text">闭包</span></a></li></ol></div>
             
 
           </div>
