@@ -81,7 +81,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JS," />
 
 
 
@@ -92,16 +92,20 @@
 
 
 
-<meta name="description" content="Be yourselfEveryone is already taken">
-<meta property="og:type" content="website">
-<meta property="og:title" content="凌云阁">
-<meta property="og:url" content="https://sheldon22.github.io/tags/HTML/index.html">
+<meta name="description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS之原型链">
+<meta property="og:url" content="https://sheldon22.github.io/2018/07/31/JS之原型链/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="Be yourselfEveryone is already taken">
+<meta property="og:description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/1.png">
+<meta property="og:updated_time" content="2018-07-31T06:13:32.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凌云阁">
-<meta name="twitter:description" content="Be yourselfEveryone is already taken">
+<meta name="twitter:title" content="JS之原型链">
+<meta name="twitter:description" content="从一个问题谈起…  我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的__proto__是什么？__proto__是对prototype的引用。prototype又是什么呢？prototype是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到prototype里， 然后让每个对象的__proto__存储这个原型的地址。所有对象都有__proto__，而所有构造函数都">
+<meta name="twitter:image" content="https://sheldon22.github.io/2018/07/31/JS之原型链/1.png">
 
 
 
@@ -131,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://sheldon22.github.io/tags/HTML/"/>
+  <link rel="canonical" href="https://sheldon22.github.io/2018/07/31/JS之原型链/"/>
 
 
 
 
 
-  <title>标签: HTML | 凌云阁</title>
+  <title>JS之原型链 | 凌云阁</title>
   
 
 
@@ -156,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 <a href="https://github.com/sheldon22" class="github-corner" aria-label="View source on Github"><svg width="90" height="90" viewBox="0 0 250 250" 
@@ -311,82 +315,232 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>HTML<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/07/31/JS之原型链/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Summer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凌云阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/13/HTML之表格与表单/" itemprop="url">
-              
-                <span itemprop="name">HTML之表格与表单</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JS之原型链</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-13T20:26:44+08:00"
-              content="2018-03-13" >
-          03-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T11:56:46+08:00">
+                2018-07-31
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-31T14:13:32+08:00">
+                2018-07-31
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/31/JS之原型链/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/31/JS之原型链/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  527
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/13/HTML之基础知识与标签/" itemprop="url">
-              
-                <span itemprop="name">HTML之基础知识与标签</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-13T20:21:19+08:00"
-              content="2018-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>从一个问题谈起…</p>
+<p><img src="/2018/07/31/JS之原型链/1.png" alt=""></p>
+<p>我们定义了一个数组，它应该只有0，1，2，length这几个值，图中的<code>__proto__</code>是什么？<code>__proto__</code>是对<code>prototype</code>的引用。<code>prototype</code>又是什么呢？<code>prototype</code>是原型，也就是共有属性。JS将对象需要共享的属性和方法，都放到<code>prototype</code>里， 然后让每个对象的<code>__proto__</code>存储这个原型的地址。<br>所有对象都有<code>__proto__</code>，而所有构造函数都有<code>prototype</code>。对象<code>__proto__</code>===构造函数<code>prototype</code>。数组也是对象的一种，所以自然拥有<code>__proto__</code>。</p>
+<p>基础类型(number，string，boolean)用了<code>new</code>操作符以后，就成了对象(包装对象)。<code>number</code>、<code>string</code>都有自己的属性，存在自身的原型，然后所有对象都共有的属性则存在<code>object</code>原型里。但是我们发现<code>var a = 1</code>，<code>a.toString</code>也是可以的，这是为什么呢？这是源于一个巧妙的设计。当你使用<code>a.toString</code>的时候，实际上经过了一个临时转换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">temp = new Number(a)</span><br><span class="line">temp.toString</span><br><span class="line">得到值后temp就自动消失</span><br></pre></td></tr></table></figure></p>
+<p>读取对象的某个属性时，JS引擎会先寻找对象本身的属性，找不到的话，就到它的原型去找，如果还是找不到，就到原型的原型去找。直到找到一个名字匹配的属性或到达原型链的末尾。如果直到最顶层的<code>Object.prototype</code>还是找不到，则返回<code>undefined</code>。<code>Object.prototype</code>的原型是<code>null</code>。<code>null</code>没有任何属性和方法，也没有自己的原型。所以原型链的尽头就是<code>null</code>。如果对象自身和它的原型，都定义了一个同名属性，那么优先读取对象自身的属性，这叫做覆盖。</p>
+<p>原型链的形成是靠<code>__proto__</code>而非<code>prototype</code>，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找。一个对象的<code>__proto__</code>记录着自己的原型链，决定了自身的数据类型，改变 <code>__proto__</code>就等于改变对象的数据类型。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/30/CSS综合/" rel="next" title="CSS综合">
+                <i class="fa fa-chevron-left"></i> CSS综合
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -394,6 +548,13 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -685,6 +846,10 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
