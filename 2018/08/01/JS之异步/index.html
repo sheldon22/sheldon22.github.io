@@ -81,7 +81,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JS," />
 
 
 
@@ -92,16 +92,20 @@
 
 
 
-<meta name="description" content="Be yourselfEveryone is already taken">
-<meta property="og:type" content="website">
-<meta property="og:title" content="凌云阁">
-<meta property="og:url" content="https://sheldon22.github.io/categories/Hexo建站/index.html">
+<meta name="description" content="为什么异步会产生？众所周知JS引擎是单线程的。单线程意味着所有任务需要排队，只有前一个任务结束了，才能执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。这样很浪费时间，如果主线程能挂起处于等待中的任务，先运行排在后面的任务。等到之前的任务返回了结果，再去执行挂起的任务。这样就大大的节省了时间，这也是异步的由来。 异步是如何实现的呢？主线程发起一个异步请求(比如setTimeOut">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS之异步">
+<meta property="og:url" content="https://sheldon22.github.io/2018/08/01/JS之异步/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="Be yourselfEveryone is already taken">
+<meta property="og:description" content="为什么异步会产生？众所周知JS引擎是单线程的。单线程意味着所有任务需要排队，只有前一个任务结束了，才能执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。这样很浪费时间，如果主线程能挂起处于等待中的任务，先运行排在后面的任务。等到之前的任务返回了结果，再去执行挂起的任务。这样就大大的节省了时间，这也是异步的由来。 异步是如何实现的呢？主线程发起一个异步请求(比如setTimeOut">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sheldon22.github.io/2018/08/01/JS之异步/0.png">
+<meta property="og:updated_time" content="2018-08-01T12:37:47.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凌云阁">
-<meta name="twitter:description" content="Be yourselfEveryone is already taken">
+<meta name="twitter:title" content="JS之异步">
+<meta name="twitter:description" content="为什么异步会产生？众所周知JS引擎是单线程的。单线程意味着所有任务需要排队，只有前一个任务结束了，才能执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。这样很浪费时间，如果主线程能挂起处于等待中的任务，先运行排在后面的任务。等到之前的任务返回了结果，再去执行挂起的任务。这样就大大的节省了时间，这也是异步的由来。 异步是如何实现的呢？主线程发起一个异步请求(比如setTimeOut">
+<meta name="twitter:image" content="https://sheldon22.github.io/2018/08/01/JS之异步/0.png">
 
 
 
@@ -131,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://sheldon22.github.io/categories/Hexo建站/"/>
+  <link rel="canonical" href="https://sheldon22.github.io/2018/08/01/JS之异步/"/>
 
 
 
 
 
-  <title>分类: Hexo建站 | 凌云阁</title>
+  <title>JS之异步 | 凌云阁</title>
   
 
 
@@ -156,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 <a href="https://github.com/sheldon22" class="github-corner" aria-label="View source on Github"><svg width="90" height="90" viewBox="0 0 250 250" 
@@ -311,83 +315,241 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo建站<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/08/01/JS之异步/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Summer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凌云阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/13/关于Hexo/" itemprop="url">
-              
-                <span itemprop="name">关于Hexo</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JS之异步</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-13T15:53:33+08:00"
-              content="2018-03-13" >
-          03-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T19:53:53+08:00">
+                2018-08-01
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-01T20:37:47+08:00">
+                2018-08-01
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/01/JS之异步/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/01/JS之异步/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  897
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/13/Next主题美化/" itemprop="url">
-              
-                <span itemprop="name">Next主题美化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-13T10:57:55+08:00"
-              content="2018-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>为什么异步会产生？众所周知JS引擎是单线程的。单线程意味着所有任务需要排队，只有前一个任务结束了，才能执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。这样很浪费时间，如果主线程能挂起处于等待中的任务，先运行排在后面的任务。等到之前的任务返回了结果，再去执行挂起的任务。这样就大大的节省了时间，这也是异步的由来。</p>
+<p>异步是如何实现的呢？主线程发起一个异步请求(比如setTimeOut)，相应的工作线程接收请求。主线程继续执行后面的代码，同时工作线程执行异步任务。只要异步任务有了运行结果，就在任务队列中放置一个事件。一旦主线程中的所有同步任务执行完毕(JS引擎空闲)，系统就会读取任务队列，将可运行的异步任务添加到可执行栈中，开始执行。主线程从”任务队列”中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为Event Loop(事件循环)。</p>
+<p><img src="/2018/08/01/JS之异步/0.png" alt=""></p>
+<p>之前不是说JS引擎是单线程的吗？这个工作线程又是个啥？单线程是指JS引擎中负责解释和执行代码的线程只有一个。它也称为主线程。但是实际上还存在其他的线程，如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程。这些线程存在于JS引擎之外，是由浏览器提供的，准确的来说是由浏览器的渲染进程提供的。浏览器的渲染进程除了包含上述线程外，还包含JS引擎线程，GUI渲染线程，事件触发线程。浏览器渲染进程里的线程可以统称为工作进程，它们会帮助JS引擎完成必要的工作。</p>
+<p>当JS引擎执行异步任务如AJAX请求(或点击事件，setTimeOut等…)，浏览器会将对应任务添加到事件触发线程中。当对应的事件符合触发条件被触发时，该线程会把事件添加到任务队列的队尾，等待JS引擎的处理。由于JS是单线程的，所以任务队列中的事件都得排队等待JS引擎处理(当JS引擎空闲时才会去执行)。</p>
+<p>任务队列又分为两种：宏任务队列macro tasks和微任务队列micro tasks。</p>
+<p>宏任务：script(全局任务), setTimeout, setInterval, setImmediate, I/O, UI rendering.</p>
+<p>微任务：process.nextTick, Promise, Object.observer, MutationObserver.</p>
+<p>运行机制是怎样的？先执行一个宏任务(栈中没有就从事件队列中获取)，执行过程中如果遇到微任务，就将它添加到微任务的任务队列中。宏任务执行完毕后，立即执行当前微任务队列中的所有微任务(依次执行)。当前宏任务执行完毕，开始检查渲染，然后GUI线程接管渲染。渲染完毕后，JS线程继续接管，开始下一个宏任务(从事件队列中获取)。</p>
+<p>参考文献</p>
+<ol>
+<li><a href="http://www.jianshu.com/p/561db8ff3e7a" target="_blank" rel="noopener">JavaScript 运行机制详解(理解同步、异步和事件循环)</a></li>
+<li><a href="https://segmentfault.com/a/1190000011198232" target="_blank" rel="noopener">JavaScript 异步、栈、事件循环、任务队列</a></li>
+<li><a href="https://segmentfault.com/a/1190000012925872#articleHeader17" target="_blank" rel="noopener">从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</a></li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/31/JS进阶/" rel="next" title="JS进阶">
+                <i class="fa fa-chevron-left"></i> JS进阶
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -395,6 +557,13 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -686,6 +855,10 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
