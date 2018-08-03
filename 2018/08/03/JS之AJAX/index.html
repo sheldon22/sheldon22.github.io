@@ -81,7 +81,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JS," />
 
 
 
@@ -92,16 +92,18 @@
 
 
 
-<meta name="description" content="Be yourselfEveryone is already taken">
-<meta property="og:type" content="website">
-<meta property="og:title" content="凌云阁">
-<meta property="og:url" content="https://sheldon22.github.io/categories/JS/index.html">
+<meta name="description" content="在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。 何为Ajax？Ajax的全称为Asynchronous JavaScrip">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS之AJAX">
+<meta property="og:url" content="https://sheldon22.github.io/2018/08/03/JS之AJAX/index.html">
 <meta property="og:site_name" content="凌云阁">
-<meta property="og:description" content="Be yourselfEveryone is already taken">
+<meta property="og:description" content="在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。 何为Ajax？Ajax的全称为Asynchronous JavaScrip">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-03T08:32:13.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凌云阁">
-<meta name="twitter:description" content="Be yourselfEveryone is already taken">
+<meta name="twitter:title" content="JS之AJAX">
+<meta name="twitter:description" content="在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。 何为Ajax？Ajax的全称为Asynchronous JavaScrip">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://sheldon22.github.io/categories/JS/"/>
+  <link rel="canonical" href="https://sheldon22.github.io/2018/08/03/JS之AJAX/"/>
 
 
 
 
 
-  <title>分类: JS | 凌云阁</title>
+  <title>JS之AJAX | 凌云阁</title>
   
 
 
@@ -156,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 <a href="https://github.com/sheldon22" class="github-corner" aria-label="View source on Github"><svg width="90" height="90" viewBox="0 0 250 250" 
@@ -311,279 +313,240 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>JS<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sheldon22.github.io/2018/08/03/JS之AJAX/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Summer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凌云阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/03/JS之AJAX/" itemprop="url">
-              
-                <span itemprop="name">JS之AJAX</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JS之AJAX</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-03T16:23:34+08:00"
-              content="2018-08-03" >
-          08-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T16:23:34+08:00">
+                2018-08-03
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-03T16:32:13+08:00">
+                2018-08-03
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/03/JS之AJAX/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/03/JS之AJAX/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  765
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/02/JS之事件/" itemprop="url">
-              
-                <span itemprop="name">JS之事件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-02T14:18:57+08:00"
-              content="2018-08-02" >
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/02/JS之原生DOM/" itemprop="url">
-              
-                <span itemprop="name">JS之原生DOM</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-02T10:36:09+08:00"
-              content="2018-08-02" >
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/01/JS之异步/" itemprop="url">
-              
-                <span itemprop="name">JS之异步</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-01T19:53:53+08:00"
-              content="2018-08-01" >
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/31/JS进阶/" itemprop="url">
-              
-                <span itemprop="name">JS进阶</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-31T20:00:37+08:00"
-              content="2018-07-31" >
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/18/JS之函数/" itemprop="url">
-              
-                <span itemprop="name">JS之函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-18T13:38:44+08:00"
-              content="2018-03-18" >
-          03-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/18/JS之对象/" itemprop="url">
-              
-                <span itemprop="name">JS之对象</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-18T11:16:08+08:00"
-              content="2018-03-18" >
-          03-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/17/JS之变量/" itemprop="url">
-              
-                <span itemprop="name">JS之变量</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-17T16:21:52+08:00"
-              content="2018-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/17/JS基础/" itemprop="url">
-              
-                <span itemprop="name">JS基础</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-17T13:14:59+08:00"
-              content="2018-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。</p>
+<p>何为Ajax？Ajax的全称为Asynchronous JavaScript and XML(异步的JavaScript与XML技术)。是指在不重新加载整个网页的情况下，通过后端与服务器进行少量数据交换，对网页的某部分进行更新。也就是说使用Ajax就可以使网页实现异步更新。</p>
+<p>Ajax使用<code>XMLHttpRequest</code>来发请求，服务器返回XML格式的字符串，JS解析XML，并更新局部页面。由于XML的语法比较繁琐，所以现在我们使用JSON来代替XML。</p>
+<p>如何使用Ajax呢？Ajax技术的核心是<code>XMLHttpRequest</code>对象，使用XHR对象取得新数据，然后通过DOM将新数据插入到页面中。另外虽然名字中包含XML，但Ajax通信与数据格式无关(可以是任何数据)。</p>
+<p><code>xhr.open()</code>它接受3个参数：发送请求的类型(“get”、”post”等)、请求的URL和表示是否异步发送请求的布尔值(false为同步, true为异步)，默认为异步。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let xhr = new XMLHttpRequest()</span><br><span class="line">xhr.open(&apos;POST&apos;, &apos;/xxx&apos;)</span><br><span class="line">xhr.onreadystatechange = function()&#123;</span><br><span class="line">    if(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</span><br><span class="line">        console.log(xhr.responseText)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure></p>
+<p>Json又是啥？JSON全名为JavaScript Object Notation是一种用于数据交换的文本格式，2001年由Douglas Crockford提出，目的是取代繁琐笨重的XML格式。</p>
+<p>JSON对值的类型和格式有严格的规定。</p>
+<p>a. 简单类型的值只有四种：字符串、数值(必须以十进制表示)、布尔值和<code>null</code>(不能使用<code>NaN</code>, <code>Infinity</code>, <code>-Infinity</code>和<code>undefined</code>)。</p>
+<p>b. 复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。</p>
+<p>c. 字符串必须使用<strong>双</strong>引号表示，不能使用单引号。对象的键名必须放在双引号里面。数组或对象最后一个成员的后面，不能加逗号。</p>
+<p>d. 空数组和空对象都是合格的JSON值。<br><code>null</code>本身也是一个合格的JSON值。</p>
+<p>ES5新增了JSON对象，用来处理JSON格式数据。它有两个方法：<code>JSON.stringify()</code>和<code>JSON.parse()</code>。</p>
+<p><code>JSON.stringify()</code>用于将一个值转为字符串。该字符串符合JSON格式，并且可以被<code>JSON.parse</code>还原。对于原始类型的字符串，转换结果会带<strong>双引号</strong>。如果原始对象中，有一个成员的值是<code>undefined</code>、函数或<code>XML</code>对象，这个成员会被过滤。</p>
+<p><code>JSON.parse()</code>用于将JSON字符串转化成对象。如果传入的字符串不是有效的JSON格式，<code>JSON.parse</code>将报错。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/02/JS之事件/" rel="next" title="JS之事件">
+                <i class="fa fa-chevron-left"></i> JS之事件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -591,6 +554,13 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -882,6 +852,10 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
