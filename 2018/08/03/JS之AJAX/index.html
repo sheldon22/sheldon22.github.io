@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="凌云阁">
 <meta property="og:description" content="在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。 何为Ajax？Ajax的全称为Asynchronous JavaScrip">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-03T08:32:13.353Z">
+<meta property="og:updated_time" content="2018-08-03T11:44:32.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之AJAX">
 <meta name="twitter:description" content="在学习完HTML,CSS,JS之后我们已经可以写出一个静态的页面了。为什么说是静态呢？因为我们页面上的数据都是写死的。在实际的工作中，我们是要通过后端来获得数据的。如何获得数据呢？通过JS发送请求获取数据。按照传统的方法，JS获取到数据之后会刷新页面来更新内容。有没有方法可以实现不刷新页面也能更新内容呢？有，使用Ajax。 何为Ajax？Ajax的全称为Asynchronous JavaScrip">
@@ -372,7 +372,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-03T16:32:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-03T19:44:32+08:00">
                 2018-08-03
               </time>
             
@@ -437,7 +437,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  765
+                  910
                 </span>
               
 
@@ -478,7 +478,8 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>何为Ajax？Ajax的全称为Asynchronous JavaScript and XML(异步的JavaScript与XML技术)。是指在不重新加载整个网页的情况下，通过后端与服务器进行少量数据交换，对网页的某部分进行更新。也就是说使用Ajax就可以使网页实现异步更新。</p>
 <p>Ajax使用<code>XMLHttpRequest</code>来发请求，服务器返回XML格式的字符串，JS解析XML，并更新局部页面。由于XML的语法比较繁琐，所以现在我们使用JSON来代替XML。</p>
 <p>如何使用Ajax呢？Ajax技术的核心是<code>XMLHttpRequest</code>对象，使用XHR对象取得新数据，然后通过DOM将新数据插入到页面中。另外虽然名字中包含XML，但Ajax通信与数据格式无关(可以是任何数据)。</p>
-<p><code>xhr.open()</code>它接受3个参数：发送请求的类型(“get”、”post”等)、请求的URL和表示是否异步发送请求的布尔值(false为同步, true为异步)，默认为异步。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let xhr = new XMLHttpRequest()</span><br><span class="line">xhr.open(&apos;POST&apos;, &apos;/xxx&apos;)</span><br><span class="line">xhr.onreadystatechange = function()&#123;</span><br><span class="line">    if(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</span><br><span class="line">        console.log(xhr.responseText)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure></p>
+<p><code>XMLHttpRequest.status</code>属性返回一个整数，表示服务器回应的HTTP状态码。一般来说，如果通信成功的话，这个状态码是200。<br><code>XMLHttpRequest.responseText</code>属性返回从服务器接收到的字符串，该属性为只读。只有 HTTP 请求完成接收以后，该属性才会包含完整的数据。<br><code>XMLHttpRequest.open()</code>用于指定HTTP请求的参数，它一共可以接受五个参数。<br><code>method</code>：表示HTTP动词方法，比如<code>GET</code>、<code>POST</code>等。<br><code>url</code>: 表示请求发送目标URL。<br><code>async</code>: 布尔值，表示请求是否为异步，默认为<code>true</code>。如果设为<code>false</code>，则<code>send()</code>只有等到收到服务器返回了结果，才会进行下一步。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let xhr = new XMLHttpRequest()</span><br><span class="line">xhr.open(&apos;POST&apos;, &apos;/xxx&apos;)</span><br><span class="line">xhr.onreadystatechange = function()&#123;</span><br><span class="line">    if(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</span><br><span class="line">        console.log(xhr.responseText)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure>
 <p>Json又是啥？JSON全名为JavaScript Object Notation是一种用于数据交换的文本格式，2001年由Douglas Crockford提出，目的是取代繁琐笨重的XML格式。</p>
 <p>JSON对值的类型和格式有严格的规定。</p>
 <p>a. 简单类型的值只有四种：字符串、数值(必须以十进制表示)、布尔值和<code>null</code>(不能使用<code>NaN</code>, <code>Infinity</code>, <code>-Infinity</code>和<code>undefined</code>)。</p>
@@ -488,6 +489,11 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
 <p>ES5新增了JSON对象，用来处理JSON格式数据。它有两个方法：<code>JSON.stringify()</code>和<code>JSON.parse()</code>。</p>
 <p><code>JSON.stringify()</code>用于将一个值转为字符串。该字符串符合JSON格式，并且可以被<code>JSON.parse</code>还原。对于原始类型的字符串，转换结果会带<strong>双引号</strong>。如果原始对象中，有一个成员的值是<code>undefined</code>、函数或<code>XML</code>对象，这个成员会被过滤。</p>
 <p><code>JSON.parse()</code>用于将JSON字符串转化成对象。如果传入的字符串不是有效的JSON格式，<code>JSON.parse</code>将报错。</p>
+<p>参考链接：</p>
+<ol>
+<li><a href="http://javascript.ruanyifeng.com/bom/ajax.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/bom/ajax.html</a></li>
+<li><a href="http://json.org/index.html" target="_blank" rel="noopener">http://json.org/index.html</a></li>
+</ol>
 
       
     </div>
@@ -718,7 +724,7 @@ fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></pa
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">24.2k</span>
+    <span title="Site words total count">24.3k</span>
   
 </div>
 
